@@ -1,0 +1,62 @@
+body {
+	padding-top: 50px;
+}
+
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+.post_new {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.post_new input[type=file] {
+	display: inline;
+	margin-top: 10px;
+}
+
+.post_new h4 {
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+}
+
+.questions_form {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.questions_form h5 {
+	text-align: left;
+	margin-right: 10px;
+}
+
+.question {
+	border-bottom: solid 1px RGB(238, 238, 238);
+}
+
+.question input[type="text"] {
+	width: 50%;
+	margin-bottom: 5px;
+}
+
+.option {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.option label.radio-line {
+	margin-right: 20%;
+	font-weight: 200;
+}
+
+.option label.checkbox-inline {
+	margin-right: 3%;
+	font-weight: 200;
+}
