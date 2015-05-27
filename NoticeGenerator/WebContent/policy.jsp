@@ -48,7 +48,7 @@
 					<tr>
 						<th class="borderBottom-bfbfbf width-115px">FACTS</th>
 						<th class="borderBottom-bfbfbf borderLeft-bfbfbf">WHAT DOES
-							U.S. BANK DO WITH YOUR PERSONAL INFORMATION?</th>
+							${formdata.getInstitue()} DO WITH YOUR PERSONAL INFORMATION?</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -80,8 +80,8 @@
 							share customers&rsquo; personal information to run their everyday
 							business. In the section below, we list the reasons financial
 							companies can share their customers&rsquo; personal information;
-							the reasons U.S. Bank chooses to share; and whether you can limit
-							this sharing.</td>
+							the reasons ${formdata.getInstitue()} chooses to share; and
+							whether you can limit this sharing.</td>
 					</tr>
 				</tbody>
 			</table>
@@ -96,8 +96,8 @@
 					<tr>
 						<th class=" borderBottom-bfbfbf">Reasons we can share your
 							personal information</th>
-						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">Does U.S.
-							Bank share?</th>
+						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">Does
+							${formdata.getInstitue()} share?</th>
 						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">Can you
 							limit this sharing?</th>
 					</tr>
@@ -235,11 +235,12 @@
 							<p>
 								Except for California, North Dakota and Vermont residents, a
 								different notice applies to customers who leased or purchased a
-								vehicle and obtained U.S. Bank financing directly through a
-								dealership. That notice from U.S. Bank--Dealer Financial
-								Services is available online at <a
-									title="http://www.usbank.com/privacy" href="/privacy">http://www.usbank.com/privacy</a>
-								or by calling 800-437-9497.
+								vehicle and obtained ${formdata.getInstitue()} financing
+								directly through a dealership. That notice from
+								${formdata.getInstitue()}--Dealer Financial Services is
+								available online at <a title="http://www.usbank.com/privacy"
+									href="/privacy">http://www.usbank.com/privacy</a> or by calling
+								800-437-9497.
 							</p></td>
 					</tr>
 				</tbody>
@@ -258,7 +259,7 @@
 				<tbody>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
-								U.S. Bank protect my personal information?</strong></td>
+								${formdata.getInstitue()} protect my personal information?</strong></td>
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">To protect
 							your personal information from unauthorized access and use, we
 							use security measures that comply with federal law. These
@@ -267,7 +268,7 @@
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
-								U.S. Bank collect my personal information?</strong></td>
+								${formdata.getInstitue()} collect my personal information?</strong></td>
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
 							your personal information, for example, when you
 							<ul class="mortgageList prepend-top-5px margin-0px">
@@ -333,8 +334,8 @@
 							not related by common ownership or control. They can be financial
 							and nonfinancial companies.
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li><em>U.S. Bank does not share with nonaffiliates so
-										they can market to you</em></li>
+								<li><em>${formdata.getInstitue()} does not share with
+										nonaffiliates so they can market to you</em></li>
 							</ul>
 						</td>
 					</tr>
@@ -344,7 +345,8 @@
 							nonaffiliated financial companies that together market financial
 							products or services to you.
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li><em>U.S. Bank doesn't jointly market</em></li>
+								<li><em>${formdata.getInstitue()} doesn't jointly
+										market</em></li>
 							</ul>
 						</td>
 					</tr>
@@ -398,12 +400,13 @@
 							800-USBANKS (800-872-2657), clicking the &ldquo;Email Us&rdquo;
 							link at usbank.com/privacy, or writing to P.O. Box 64490, St.
 							Paul, MN 55164. You are being provided this notice under Nevada
-							state law. In addition to contacting U.S. Bank, Nevada residents
-							can contact the Nevada Attorney General for more information
-							about your opt out rights by calling 702-486-3132, emailing
-							aginfo@ag.nv.gov, or by writing to: <br />Office of the Attorney
-							General, Nevada Department of Justice, Bureau of Consumer
-							Protection 100 North Carson Street, Carson City, NV 89701-4717</td>
+							state law. In addition to contacting ${formdata.getInstitue()},
+							Nevada residents can contact the Nevada Attorney General for more
+							information about your opt out rights by calling 702-486-3132,
+							emailing aginfo@ag.nv.gov, or by writing to: <br />Office of the
+							Attorney General, Nevada Department of Justice, Bureau of
+							Consumer Protection 100 North Carson Street, Carson City, NV
+							89701-4717</td>
 					</tr>
 				</tbody>
 			</table>

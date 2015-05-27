@@ -1879,7 +1879,7 @@ a.mortgageSoloLink:hover{color:#0C2074; text-decoration:none;cursor:pointer;}
 
 /*--Mortgage List. This has been renamed as mortgageList as part of renaming process to be used across the site.--*/
 #IE7 .mortgageList {margin-bottom:0px !important;}
-.mortgageList{margin:0px !important;  list-style-type:none !important; background-position:10px 20px;}
+.mortgageList{margin-left:15px !important; background-position:10px 20px;}
 .mortgageList li{margin-bottom:0px !important;background-image:url(../../images/disc.png); 
 						 background-repeat:no-repeat;
 						background-position:0px 6px; padding-left:15px }

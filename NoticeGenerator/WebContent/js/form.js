@@ -80,6 +80,17 @@ $(function() {
 		}
 	});
 
+	$('h5').hover(function() {
+		var offset = $(this).offset();
+		//var length = $(this).width() + offset.left;
+		$(this).append('<span id="tips">haha</span>');
+		$('#tips').fadeIn(200).addClass('showTooltip');
+		$('#tips').css('left', offset.left + 'px');
+	}, function() {
+		$('#tips').fadeOut(200);
+		$('#tips').remove();
+	});
+
 	var configuration = document.getElementById("content");
 	console.log("shit");
 	if (configuration) {
