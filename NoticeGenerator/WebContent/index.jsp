@@ -62,7 +62,7 @@ function getFormData() {
 	hiddenField.setAttribute("value", JSON.stringify(formData));
 	form.appendChild(hiddenField);
 	document.body.appendChild(form);
-	//form.submit();	
+	form.submit();	
 }
 </script>
 </head>
