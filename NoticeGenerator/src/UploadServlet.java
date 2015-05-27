@@ -1,22 +1,43 @@
 import javax.servlet.*;
 import javax.servlet.http.*;
+
 import java.io.*;
+import java.net.MalformedURLException;
 import java.util.*;
+
 import org.apache.commons.fileupload.*;
 import org.apache.commons.fileupload.servlet.*;
 import org.apache.commons.fileupload.disk.*;
 
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private String filePath;
+	private String tempPath;
+
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		filePath = config.getInitParameter("filepath");
+		tempPath = config.getInitParameter("temppath");
+
+		ServletContext context = getServletContext();
+
+		 filePath = context.getRealPath(filePath);
+		 tempPath = context.getRealPath(tempPath);
+
+		System.out.println("filePath" + filePath);
+
+		System.out.println("folder configuration");
+	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws IOException, ServletException {
-		res.setContentType("text/html;charset=UTF-8");
-		res.setCharacterEncoding("UTF-8");
+		res.setContentType("text/plain;charset=gbk");
 		PrintWriter pw = res.getWriter();
 		try {
 			DiskFileItemFactory diskFactory = new DiskFileItemFactory();
 			diskFactory.setSizeThreshold(4 * 1024);
+
+			diskFactory.setRepository(new File(tempPath));
 
 			ServletFileUpload upload = new ServletFileUpload(diskFactory);
 			upload.setSizeMax(4 * 1024 * 1024);
@@ -29,8 +50,7 @@ public class UploadServlet extends HttpServlet {
 					processFormField(item, pw);
 				} else {
 					System.out.println("Processing file");
-
-					processUploadFile(item, pw);
+					File file = processUploadFile(item, pw);// use this file 
 				}
 			}
 			pw.close();
@@ -47,7 +67,7 @@ public class UploadServlet extends HttpServlet {
 		pw.println(name + " : " + value + "\r\n");
 	}
 
-	private void processUploadFile(FileItem item, PrintWriter pw)
+	private File processUploadFile(FileItem item, PrintWriter pw)
 			throws Exception {
 
 		String filename = item.getName();
@@ -56,11 +76,14 @@ public class UploadServlet extends HttpServlet {
 		filename = filename.substring(index + 1, filename.length());
 
 		long fileSize = item.getSize();
-		System.out.println("fileSize" + fileSize);
+		File file = new File(filePath + "/" + filename);
+		item.write(file);
+		
 		if ("".equals(filename) && fileSize == 0) {
 			System.out.println("Filename is empty");
-			return;
+			return null;
 		}
+		return file;
 	}
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res)

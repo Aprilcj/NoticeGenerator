@@ -20,10 +20,19 @@
 		<servlet-name>DownloadServlet</servlet-name>
 		<url-pattern> /download.do </url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>UploadServlet</servlet-name>
 		<servlet-class>UploadServlet</servlet-class>
+
+		<init-param>
+			<param-name>filepath</param-name>
+			<param-value>/uploadFile</param-value>
+		</init-param>
+		<init-param>
+			<param-name>temppath</param-name>
+			<param-value>/temp</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UploadServlet</servlet-name>
