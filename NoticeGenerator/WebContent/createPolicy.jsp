@@ -185,15 +185,15 @@
 							to collect?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="income"> Income
+								value="income" id="income"> Income
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="account_balance"> Account Balance
+								value="account_balance" id="account_balance"> Account Balance
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="payment_history"> Payment History
+								value="payment_history" id="payment_history"> Payment History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit_history"> Credit History
+								value="credit_history" id="credit_history"> Credit History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit_scores"> Credit Scores
+								value="credit_scores" id="credit_scores"> Credit Scores
 							</label>
 						</div>
 					</div>
@@ -203,9 +203,9 @@
 							business purposes?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question4" value="yes"> Yes
+								id="question4" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question4" value="no"> No
+								id="question4" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -214,9 +214,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question5" value="yes"> Yes
+								id="question5" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question5" value="no"> No
+								id="question5" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -226,9 +226,9 @@
 							purposes?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question6" value="yes"> Yes
+								id="question6" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question6" value="no"> No
+								id="question6" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -237,9 +237,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question7" value="yes"> Yes
+								id="question7" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question7" value="no"> No
+								id="question7" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -249,9 +249,9 @@
 							with other financial companies?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question8" value="yes"> Yes
+								id="question8" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question8" value="no"> No
+								id="question8" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -260,9 +260,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question9" value="yes"> Yes
+								id="question9" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question9" value="no"> No
+								id="question9" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -273,9 +273,9 @@
 							transactions and experiences)</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question10" value="yes"> Yes
+								id="question10" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question10" value="no"> No
+								id="question10" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -284,9 +284,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question11" value="yes"> Yes
+								id="question11" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question11" value="no"> No
+								id="question11" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -297,9 +297,9 @@
 							creditworthiness)</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question12" value="yes"> Yes
+								id="question12" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question12" value="no"> No
+								id="question12" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -308,9 +308,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question13" value="yes"> Yes
+								id="question13" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question13" value="no"> No
+								id="question13" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -320,9 +320,9 @@
 							to market to customers?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question14" value="yes"> Yes
+								id="question14" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question14" value="no"> No
+								id="question14" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -331,9 +331,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question15" value="yes"> Yes
+								id="question15" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question15" value="no"> No
+								id="question15" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -343,9 +343,9 @@
 							nonaffiliates to market to customers?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question16" value="yes"> Yes
+								id="question16" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question16" value="no"> No
+								id="question16" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -354,9 +354,9 @@
 						<h5>- Do you allow customer to limit this sharing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question17" value="yes"> Yes
+								id="question17" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question17" value="no"> No
+								id="question17" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -366,15 +366,15 @@
 						<h5>- Under what scenario you will collect information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account"> Open Account
+								value="open_account" id="open_account"> Open Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money"> Deposit Money
+								value="deposit_money" id="deposit_money"> Deposit Money
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills"> Pay Bills
+								value="pay_bills" id="pay_bills"> Pay Bills
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="apply_for_loan"> Apply for Loan
+								value="apply_for_loan" id="apply_for_loan"> Apply for Loan
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card"> Use Debit or Credit Card
+								value="use_card" id="use_card"> Use Debit or Credit Card
 							</label>
 						</div>
 					</div>
@@ -399,9 +399,9 @@
 						<h5>- You will collect informaton from:</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question18" value="other_company"> Other companies
+								id="question18" value="other_company"> Other companies
 							</label> <label class="radio-line"> <input type="radio"
-								name="question18" value="others"> others such as credit
+								id="question18" value="others"> others such as credit
 								bureaus, affliates, or other companies
 							</label>
 						</div>
@@ -410,7 +410,7 @@
 					<div class="question">
 						<h5>- Affliates Defination</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="affliates_defination"
 								placeholder="Affliates Defination">
 						</div>
 					</div>
@@ -418,7 +418,7 @@
 					<div class="question">
 						<h5>- Nonaffliates Defination</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="nonaffliates_defination"
 								placeholder="Nonaffliates Defination">
 						</div>
 					</div>
@@ -426,7 +426,7 @@
 					<div class="question">
 						<h5>- Joint Marketing Defination</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="joint_marketing_defination"
 								placeholder="Joint Marketing Defination">
 						</div>
 					</div>
@@ -434,7 +434,7 @@
 					<div class="question">
 						<h5>- Other Information</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="other_information"
 								placeholder="Other Information">
 						</div>
 					</div>
