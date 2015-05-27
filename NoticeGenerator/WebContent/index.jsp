@@ -11,9 +11,6 @@ $( document ).ready(function() {
 		console.log("hahha");
 		var data = JSON.parse(decodeURIComponent(configuration.value));
 		console.log(data);
-// 		document.getElementById("companyname").value = data.companyname;
-// 		document.getElementById("businesspurposes").value = data.businesspurposes;
-// 		document.getElementById("limitbusinessshare").value = data.limitbusinessshare;
 		
 		var form = document.forms["info"];
 		for(var i = 0; i < form.elements.length;++i){
@@ -34,9 +31,6 @@ $( document ).ready(function() {
 
 function getFormData() {
 	var formData = new Object();
-// 	formData.companyname = document.getElementById("companyname").value;
-// 	formData.businesspurposes = document.getElementById("businesspurposes").value;
-// 	formData.limitbusinessshare = document.getElementById("limitbusinessshare").value;
 	
 	var form = document.forms["info"];
 	for(var i = 0; i < form.elements.length;++i){

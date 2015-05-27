@@ -19,9 +19,9 @@ function download(){
 
 function configuration(){
 	var formData = new Object();
-	formData.companyname = document.getElementById("companyname").innerHTML;
-	formData.businesspurposes = document.getElementById("businesspurposes").innerHTML;
-	formData.limitbusinessshare = document.getElementById("limitbusinessshare").innerHTML;
+	formData.institute = document.getElementById("institute").innerHTML;
+	formData.phone = document.getElementById("phone").innerHTML;
+	formData.website = document.getElementById("website").innerHTML;
 	console.log(formData);
 	
 	var form = document.createElement("form");
@@ -45,13 +45,13 @@ function configuration(){
 
  <ul>
   <li>Please type in the name of your company:<br>
-    <div id="companyname">${companyname}</div>
+    <div id="institute">${formdata.getInstitute()}</div>
   </li>  
   <li>Do you share customer's information for your everyday business purposes?<br>
-    <div id="businesspurposes">${businesspurposes }</div>
+    <div id="phone">${formdata.getPhone()}</div>
   </li>
   <li>If yes, can customer limit this kind of sharing?<br>
-    <div id="limitbusinessshare">${limitbusinessshare}</div>
+    <div id="website">${formdata.getWebsite()}</div>
   </li>
  </ul>
  </div>

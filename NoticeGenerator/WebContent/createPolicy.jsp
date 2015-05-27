@@ -9,6 +9,68 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+	var configuration = document.getElementById("content");
+	console.log("shit");
+	if(configuration){
+		console.log("hahha");
+		var data = JSON.parse(decodeURIComponent(configuration.value));
+		console.log(data);
+		
+		var form = document.forms["info"];
+		for(var i = 0; i < form.elements.length;++i){
+			var element = form.elements[i];
+			console.log(element);
+			if(element.type == "text"){
+				element.value = data[element.id];
+			}else if(element.type == "radio"){
+				if(element.value == data[element.id]){
+					element.checked = true;
+				}else{
+					element.checked =false;
+				}
+			}
+		}		
+	}
+});
+
+function getFormData() {
+	var formData = new Object();
+	
+	var form = document.forms["info"];
+	for(var i = 0; i < form.elements.length;++i){
+		var element = form.elements[i];
+		console.log(element);
+		if(element.type == "text"){
+			formData[element.id]=element.value;
+		}else if(element.type == "radio"){
+			if(element.checked == true){
+				formData[element.id] = element.value;
+			}
+		} else if(element.type == "checkbox"){
+			if(element.checked == true){
+				formData[element.id] = element.value;
+			}
+		}
+	}
+	console.log(formData);
+	
+	var form = document.createElement("form");
+	form.setAttribute("method", "post");
+	form.setAttribute("action", "notice-service.do");
+
+	var hiddenField = document.createElement("input");
+	hiddenField.setAttribute("type","hidden");
+	hiddenField.setAttribute("name", "content");
+	hiddenField.setAttribute("value", JSON.stringify(formData));
+	form.appendChild(hiddenField);
+	document.body.appendChild(form);
+	form.submit();	
+}
+</script>
+
 </head>
 
 <body>
@@ -55,13 +117,13 @@
 
 			<div class="questions_form" style="width: 70%; padding-bottom: 15px;">
 
-				<form>
+				<form id="info">
 
 
 					<div class="question">
 						<h5>- Name of financial institute</h5>
 						<div class="option">
-							<input type="text" class="form-control"
+							<input type="text" class="form-control" id="institute"
 								placeholder="Institute Name">
 						</div>
 					</div>
@@ -69,7 +131,7 @@
 					<div class="question">
 						<h5>- Phone number of financial institute</h5>
 						<div class="option">
-							<input type="text" class="form-control"
+							<input type="text" class="form-control" id="phone"
 								placeholder="Phone Number">
 						</div>
 					</div>
@@ -77,7 +139,7 @@
 					<div class="question">
 						<h5>- Website of financial institute</h5>
 						<div class="option">
-							<input type="text" class="form-control" placeholder="Website">
+							<input type="text" class="form-control" id="website" placeholder="Website">
 						</div>
 					</div>
 
@@ -86,9 +148,9 @@
 						<h5>- Do you provide opt-out option?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question1" value="yes"> Yes
+								id="question1" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question1" value="no"> No
+								id="question1" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -97,9 +159,9 @@
 						<h5>- Do you provide mail-in option?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question2" value="yes"> Yes
+								id="question2" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question2" value="no"> No
+								id="question2" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -108,9 +170,9 @@
 						<h5>- Do you want to include affiliate marketing?</h5>
 						<div class="option">
 							<label class="radio-line"> <input type="radio"
-								name="question3" value="yes"> Yes
+								id="question3" value="yes"> Yes
 							</label> <label class="radio-line"> <input type="radio"
-								name="question3" value="no"> No
+								id="question3" value="no"> No
 							</label>
 						</div>
 					</div>
@@ -315,7 +377,7 @@
 						</div>
 					</div>
 					
-					<button type="button" class="btn btn-lg btn-primary" style="margin-top: 20px;">Generate Policy</button>
+					<button type="button" class="btn btn-lg btn-primary" onclick="getFormData()" style="margin-top: 20px;">Generate Policy</button>
 
 				</form>
 			</div>

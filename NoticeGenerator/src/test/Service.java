@@ -19,10 +19,12 @@ public class Service extends HttpServlet {
 		String data = request.getParameter("content");
 		FormData formData = new Gson().fromJson(data.toString(),
 				FormData.class);
-		request.setAttribute("companyname", formData.companyname);
-		request.setAttribute("businesspurposes", formData.businesspurposes);
-		request.setAttribute("limitbusinessshare",
-				formData.limitbusinessshare);
+		
+//		request.setAttribute("institute", formData.institute);
+//		request.setAttribute("phone", formData.phone);
+//		request.setAttribute("website",
+//				formData.website);
+		request.setAttribute("formdata", formData);
 		RequestDispatcher d = request.getRequestDispatcher("notice.jsp");
 		d.forward(request, response);
 	}
