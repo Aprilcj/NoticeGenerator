@@ -122,15 +122,15 @@
 							to collect?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="income" id="income"> Income
+								value="income" name="personal_information"> Income
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="account_balance" id="account_balance"> Account Balance
+								value="account_balance" name="personal_information"> Account Balance
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="payment_history" id="payment_history"> Payment History
+								value="payment_history" name="personal_information"> Payment History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit_history" id="credit_history"> Credit History
+								value="credit_history" name="personal_information"> Credit History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit_scores" id="credit_scores"> Credit Scores
+								value="credit_scores" name="personal_information"> Credit Scores
 							</label>
 						</div>
 					</div>
@@ -303,15 +303,15 @@
 						<h5>- Under what scenario you will collect information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" id="open_account"> Open Account
+								value="open_account" name="other_information"> Open Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" id="deposit_money"> Deposit Money
+								value="deposit_money" name="other_information"> Deposit Money
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" id="pay_bills"> Pay Bills
+								value="pay_bills" name="other_information"> Pay Bills
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="apply_for_loan" id="apply_for_loan"> Apply for Loan
+								value="apply_for_loan" name="other_information"> Apply for Loan
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" id="use_card"> Use Debit or Credit Card
+								value="use_card" name="other_information"> Use Debit or Credit Card
 							</label>
 						</div>
 					</div>
@@ -319,7 +319,7 @@
 					<div class="question">
 						<h5>- Who is providing this notice?</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="who"
 								placeholder="Who you are">
 						</div>
 					</div>
@@ -327,7 +327,7 @@
 					<div class="question">
 						<h5>- How do you protect customer's personal information?</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="institute"
+							<input type="text" class="form-control" id="how"
 								placeholder="What you do">
 						</div>
 					</div>
@@ -371,10 +371,15 @@
 					<div class="question">
 						<h5>- Other Information</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="other_information"
+							<input type="text" class="form-control" id="additional_note"
 								placeholder="Other Information">
 						</div>
 					</div>
+					
+					  <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+ <c:if test="${configuration !=null}">
+ <input type="hidden" id="content" value="${configuration}" />
+ </c:if>
 
 					<button type="button" class="btn btn-lg btn-primary"
 						onclick="getFormData()" style="margin-top: 20px;">Generate

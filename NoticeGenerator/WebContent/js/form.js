@@ -94,7 +94,7 @@ $(function() {
 			if (element.type == "text") {
 				element.value = data[element.id];
 			} else if (element.type == "radio") {
-				if (element.value == data[element.id]) {
+				if (element.value == data[element.name]) {
 					element.checked = true;
 				} else {
 					element.checked = false;
@@ -116,12 +116,15 @@ function getFormData() {
 			formData[element.id] = element.value;
 		} else if (element.type == "radio") {
 			if (element.checked == true) {
-				formData[element.id] = element.value;
+				formData[element.name] = element.value;
 			}
 		} else if (element.type == "checkbox") {
-			if (element.checked == true) {
-				formData[element.id] = element.value;
-			}
+			if (!formData[element.name]) {
+				formData[element.name] = [];	
+			};
+			if (element.checked) {
+				formData[element.name].push(element.value);
+			};
 		}
 	}
 	console.log(formData);
