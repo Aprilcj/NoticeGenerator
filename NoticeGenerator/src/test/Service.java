@@ -24,7 +24,7 @@ public class Service extends HttpServlet {
 		for(int i = 0; i< formData.getPersonal_information().size(); i++){
 			System.out.println(formData.getPersonal_information().get(i));
 		}
-		RequestDispatcher d = request.getRequestDispatcher("notice.jsp");
+		RequestDispatcher d = request.getRequestDispatcher("policy.jsp");
 		d.forward(request, response);
 	}
 

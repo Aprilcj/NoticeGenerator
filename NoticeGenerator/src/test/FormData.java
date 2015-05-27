@@ -28,10 +28,10 @@ public class FormData {
 	
     public List<String> other_information;
     public List<String> personal_information;
-	public String affliates_defination;
-	public String nonaffliates_defination;
+	public String affliates_definition;
+	public String nonaffliates_definition;
 	public String additional_note;
-	public String joint_marketing_defination;
+	public String joint_marketing_definition;
 	public String who;
 	public String getQuestion1() {
 		return question1;
@@ -153,17 +153,17 @@ public class FormData {
 	public void setPersonal_information(List<String> personal_information) {
 		this.personal_information = personal_information;
 	}
-	public String getAffliates_defination() {
-		return affliates_defination;
+	public String getAffliates_definition() {
+		return affliates_definition;
 	}
-	public void setAffliates_defination(String affliates_defination) {
-		this.affliates_defination = affliates_defination;
+	public void setAffliates_definition(String affliates_definition) {
+		this.affliates_definition = affliates_definition;
 	}
-	public String getNonaffliates_defination() {
-		return nonaffliates_defination;
+	public String getNonaffliates_definition() {
+		return nonaffliates_definition;
 	}
-	public void setNonaffliates_defination(String nonaffliates_defination) {
-		this.nonaffliates_defination = nonaffliates_defination;
+	public void setNonaffliates_definition(String nonaffliates_definition) {
+		this.nonaffliates_definition = nonaffliates_definition;
 	}
 	public String getAdditional_note() {
 		return additional_note;
@@ -171,11 +171,11 @@ public class FormData {
 	public void setAdditional_note(String additional_note) {
 		this.additional_note = additional_note;
 	}
-	public String getJoint_marketing_defination() {
-		return joint_marketing_defination;
+	public String getJoint_marketing_definition() {
+		return joint_marketing_definition;
 	}
-	public void setJoint_marketing_defination(String joint_marketing_defination) {
-		this.joint_marketing_defination = joint_marketing_defination;
+	public void setJoint_marketing_definition(String joint_marketing_definition) {
+		this.joint_marketing_definition = joint_marketing_definition;
 	}
 	public String getWho() {
 		return who;

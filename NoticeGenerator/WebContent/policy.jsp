@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +50,7 @@
 					<tr>
 						<th class="borderBottom-bfbfbf width-115px">FACTS</th>
 						<th class="borderBottom-bfbfbf borderLeft-bfbfbf">WHAT DOES
-							${formdata.getInstitue()} DO WITH YOUR PERSONAL INFORMATION?</th>
+							${formdata.getInstitute()} DO WITH YOUR PERSONAL INFORMATION?</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -67,10 +69,12 @@
 							of personal information we collect and share depend on the
 							product or service you have with us. This information can
 							include:
+
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li>Social Security number and income</li>
-								<li>account balances and payment history</li>
-								<li>transaction history and credit history</li>
+								<li>Social Security number</li>
+								<c:forEach var="entry" items="${formdata.getPersonal_information()}" varStatus="counter">
+								<li>${entry}</li>
+								</c:forEach>
 							</ul>
 						</td>
 					</tr>
@@ -80,7 +84,7 @@
 							share customers&rsquo; personal information to run their everyday
 							business. In the section below, we list the reasons financial
 							companies can share their customers&rsquo; personal information;
-							the reasons ${formdata.getInstitue()} chooses to share; and
+							the reasons ${formdata.getInstitute()} chooses to share; and
 							whether you can limit this sharing.</td>
 					</tr>
 				</tbody>
@@ -97,7 +101,7 @@
 						<th class=" borderBottom-bfbfbf">Reasons we can share your
 							personal information</th>
 						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">Does
-							${formdata.getInstitue()} share?</th>
+							${formdata.getInstitute()} share?</th>
 						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">Can you
 							limit this sharing?</th>
 					</tr>
@@ -108,8 +112,8 @@
 								everyday business purposes</strong>&mdash; such as to process your
 							transactions, maintain your account(s), respond to court orders
 							and legal investigations, or report to credit bureaus</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Yes</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">No</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question4}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question5}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our
@@ -235,9 +239,9 @@
 							<p>
 								Except for California, North Dakota and Vermont residents, a
 								different notice applies to customers who leased or purchased a
-								vehicle and obtained ${formdata.getInstitue()} financing
+								vehicle and obtained ${formdata.getInstitute()} financing
 								directly through a dealership. That notice from
-								${formdata.getInstitue()}--Dealer Financial Services is
+								${formdata.getInstitute()}--Dealer Financial Services is
 								available online at <a title="http://www.usbank.com/privacy"
 									href="/privacy">http://www.usbank.com/privacy</a> or by calling
 								800-437-9497.
@@ -259,7 +263,7 @@
 				<tbody>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
-								${formdata.getInstitue()} protect my personal information?</strong></td>
+								${formdata.getInstitute()} protect my personal information?</strong></td>
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">To protect
 							your personal information from unauthorized access and use, we
 							use security measures that comply with federal law. These
@@ -268,7 +272,7 @@
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
-								${formdata.getInstitue()} collect my personal information?</strong></td>
+								${formdata.getInstitute()} collect my personal information?</strong></td>
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
 							your personal information, for example, when you
 							<ul class="mortgageList prepend-top-5px margin-0px">
@@ -334,7 +338,7 @@
 							not related by common ownership or control. They can be financial
 							and nonfinancial companies.
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li><em>${formdata.getInstitue()} does not share with
+								<li><em>${formdata.getInstitute()} does not share with
 										nonaffiliates so they can market to you</em></li>
 							</ul>
 						</td>
@@ -345,7 +349,7 @@
 							nonaffiliated financial companies that together market financial
 							products or services to you.
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li><em>${formdata.getInstitue()} doesn't jointly
+								<li><em>${formdata.getInstitute()} doesn't jointly
 										market</em></li>
 							</ul>
 						</td>
@@ -400,7 +404,7 @@
 							800-USBANKS (800-872-2657), clicking the &ldquo;Email Us&rdquo;
 							link at usbank.com/privacy, or writing to P.O. Box 64490, St.
 							Paul, MN 55164. You are being provided this notice under Nevada
-							state law. In addition to contacting ${formdata.getInstitue()},
+							state law. In addition to contacting ${formdata.getInstitute()},
 							Nevada residents can contact the Nevada Attorney General for more
 							information about your opt out rights by calling 702-486-3132,
 							emailing aginfo@ag.nv.gov, or by writing to: <br />Office of the
