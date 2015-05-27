@@ -16,9 +16,7 @@ import com.google.gson.Gson;
 public class Service extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.print("doPost");
 		String data = request.getParameter("content");
-		System.out.print(data);
 		FormData formData = new Gson().fromJson(data.toString(),
 				FormData.class);
 		request.setAttribute("companyname", formData.companyname);

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Download extends HttpServlet{
+public class Configuration extends HttpServlet{
 	/**
 	 * 
 	 */
@@ -15,8 +15,10 @@ public class Download extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.print("doConfiguration");
 		String data = request.getParameter("content");
-		response.setHeader("Content-Disposition","attachment; filename=\"" + "xxx.html\"");
+		System.out.print(data);
+		response.setHeader("Content-Disposition","attachment; filename=\"" + "configuration\"");
         response.getWriter().print(data);
 	}
 
