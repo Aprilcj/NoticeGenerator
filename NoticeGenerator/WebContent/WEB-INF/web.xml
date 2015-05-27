@@ -1,39 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>task14</display-name>
-  <servlet>
-    <servlet-name>ServiceServlet</servlet-name>
-    <servlet-class>test.Service</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>DownloadServlet</servlet-name>
-    <servlet-class>Download</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>ConfigurationServlet</servlet-name>
-    <servlet-class>Configuration</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>FileUploadServlet</servlet-name>
-    <servlet-class>test.FileUploadServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServiceServlet</servlet-name>
-    <url-pattern> /notice-service.do </url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DownloadServlet</servlet-name>
-    <url-pattern> /download.do </url-pattern>
-  </servlet-mapping>
-    <servlet-mapping>
-    <servlet-name>ConfigurationServlet</servlet-name>
-    <url-pattern> /configuration.do </url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>FileUploadServlet</servlet-name>
-    <url-pattern> /uploadFile </url-pattern>
-  </servlet-mapping>
-  <welcome-file-list>
-    <welcome-file>   index.jsp</welcome-file>
-  </welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>task14</display-name>
+	<servlet>
+		<servlet-name>ServiceServlet</servlet-name>
+		<servlet-class>test.Service</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadServlet</servlet-name>
+		<servlet-class>Download</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConfigurationServlet</servlet-name>
+		<servlet-class>Configuration</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>test.FileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServiceServlet</servlet-name>
+		<url-pattern> /notice-service.do </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadServlet</servlet-name>
+		<url-pattern> /download.do </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConfigurationServlet</servlet-name>
+		<url-pattern> /configuration.do </url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern> /uploadFile </url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>UploadServlet</servlet-class>
+
+		<init-param>
+			<param-name>filepath</param-name>
+			<param-value>/uploadFile</param-value>
+		</init-param>
+		<init-param>
+			<param-name>temppath</param-name>
+			<param-value>/temp</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>   index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
