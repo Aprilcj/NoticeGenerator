@@ -231,7 +231,7 @@
 
 					<div class="question">
 						<h5>- What purpose do you share information?</h5>
-						<div class="option">
+						<div class="option" id="what_purpose_div">
 							<label class="checkbox-inline"> <input type="checkbox"
 								value="open_account" name="what_purpose_sharing"
 								id="purpose_option_1"> Everyday Business
@@ -266,7 +266,7 @@
 					<div class="question" id="what_purpose_limit_sharing">
 						<h5>- Do you limit your sharing on the following purpose?
 							(based on the last question)</h5>
-						<div class="option">
+						<div class="option" id="what_purpose_limit_div">
 							<label class="checkbox-inline"> <input type="checkbox"
 								value="open_account" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_1"> Everyday Business
