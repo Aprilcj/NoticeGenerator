@@ -3,8 +3,6 @@ package test;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.util.URLEncoder;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -68,11 +67,7 @@ public class FileUploadServlet extends HttpServlet {
 		}
 		
 		public static String urlEncode(String string) {
-			try {
-				return URLEncoder.encode(string, "utf-8");
-			} catch (UnsupportedEncodingException e) {
-				return string;
-			}
+			return new URLEncoder().encode(string);
 		}
 
 }
