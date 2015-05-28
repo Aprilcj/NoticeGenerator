@@ -63,7 +63,7 @@ public class FileUploadServlet extends HttpServlet {
 			} catch (Exception ex) {
 				
 			}
-			RequestDispatcher d = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher d = request.getRequestDispatcher("createPolicy.jsp");
 			d.forward(request, response);
 		}
 		

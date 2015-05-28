@@ -137,6 +137,7 @@ public class FormData {
 		this.question13 = question13;
 	}
 	public String getQuestion14() {
+		System.out.println(question14);
 		return question14;
 	}
 	public void setQuestion14(String question14) {
@@ -148,6 +149,7 @@ public class FormData {
 		} else if(question14.equals("No")){
 			question15 = "we don't share";
 		}
+		System.out.println("question15:" + question15);
 		return question15;
 	}
 	public void setQuestion15(String question15) {

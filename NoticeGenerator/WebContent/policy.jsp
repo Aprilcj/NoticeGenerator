@@ -11,6 +11,7 @@
 <link href="css/common.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
+<script src="js/form.js"></script>
 
 </head>
 
@@ -42,7 +43,6 @@
 	</nav>
 
 	<div class="container">
-
 		<div class="prepend-top-10px">
 			<table border="0" cellspacing="0" cellpadding="0"
 				class="blueGrayTable margin-0px clear">
@@ -132,21 +132,21 @@
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								affiliates' everyday business purposes</strong> &mdash; information about
 							your transactions and experiences</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Yes</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">No</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question10}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question11}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								affiliates' everyday business purposes</strong> &mdash; information about
 							your creditworthiness</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Yes</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Yes</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question12}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question13}</td>
 					</tr>
 					<tr>
 						<td class=""><strong>For nonaffiliates to market to
 								you</strong></td>
-						<td class="borderLeft-bfbfbf">No<sup class="font-14px">*</sup></td>
-						<td class="borderLeft-bfbfbf">We don't share</td>
+						<td class="borderLeft-bfbfbf">${formdata.question14}<sup class="font-14px">*</sup></td>
+						<td class="borderLeft-bfbfbf">We dont share</td>
 					</tr>
 				</tbody>
 			</table>
@@ -275,7 +275,7 @@
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
 							your personal information, for example, when you
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li>open an account or apply for a loan</li>
+								<li>${test}</li>
 								<li>use your credit or debit card or make deposits or
 									withdrawals from your account</li>
 								<li>tell us about your investment or retirement portfolio</li>
@@ -460,14 +460,21 @@
 				</tr>
 				</tbody>
 			</table>
+			
 		</div>
-
-
+		<input type = "hidden" id="toshow" value="${formJson}"/>
+     	 	<button type="button" class="btn btn-info" onclick="download()"
+						style="margin-top: 20px;">Download Notice</button>
+		<button type="button" class="btn btn-info" onclick="configuration()"
+						style="margin-top: 20px;">Download configuration file</button> 
 	</div>
+	
+
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	
 </body>

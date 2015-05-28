@@ -45,10 +45,13 @@
 			<div class="post_new"
 				style="width: 70%; padding-bottom: 15px; border-bottom: solid 1px RGB(238, 238, 238);">
 				<h4>Upload configure file</h4>
-				<form action="postNew.do" method="post" name="post_new"
+				<form method="post" action="uploadFile" name="post_new"
 					enctype="multipart/form-data">
 					<div class="upload">
 						<input type="file" name="upload" />
+					</div>
+					<div>
+					<input type="submit" value="Upload" />
 					</div>
 				</form>
 			</div>
@@ -388,7 +391,7 @@
 
 
 					<c:if test="${configuration !=null}">
-						<input type="hidden" id="content" value="${configuration}" />
+						<input type="hidden" id="refillConfiguration" value="${configuration}" />
 					</c:if>
 
 					<button type="button" class="btn btn-info" onclick="getFormData()"
