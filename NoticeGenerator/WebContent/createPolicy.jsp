@@ -197,11 +197,13 @@
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="use_card" name="other_information"> Make Deposits
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Withdrawls from your Account
+								value="use_card" name="other_information"> Withdrawls
+								from your Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Seek Advice about Investment
+								value="use_card" name="other_information"> Seek Advice
+								about Investment
 							</label>
-											
+
 						</div>
 					</div>
 
@@ -231,28 +233,31 @@
 						<h5>- What purpose do you share information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="what_purpose_sharing">
-								Everyday Business
+								value="open_account" name="what_purpose_sharing"
+								id="purpose_option_1"> Everyday Business
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="what_purpose_sharing">
-								Marketing
+								value="deposit_money" name="what_purpose_sharing"
+								id="purpose_option_2"> Marketing
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"> Joint
-								Marketing with Other Financial Companies
+								value="pay_bills" name="what_purpose_sharing"
+								id="purpose_option_3"> Joint Marketing with Other
+								Financial Companies
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing">
-								Affiliates Everyday Business Purposes (Information about
-								customers' transactions and experiences)
+								value="pay_bills" name="what_purpose_sharing"
+								id="purpose_option_4"> Affiliates Everyday Business
+								Purposes (Information about customers' transactions and
+								experiences)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing">
-								Affiliates Everyday Business Purposes (Information about
-								customers' creditworthiness)
+								value="pay_bills" name="what_purpose_sharing"
+								id="purpose_option_5"> Affiliates Everyday Business
+								Purposes (Information about customers' creditworthiness)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing">
-								Nonaffiliates to Market to Customers
+								value="pay_bills" name="what_purpose_sharing"
+								id="purpose_option_6"> Nonaffiliates to Market to
+								Customers
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing">
-								Affiliates to Market to Customers
+								value="pay_bills" name="what_purpose_sharing"
+								id="purpose_option_7"> Affiliates to Market to Customers
 							</label>
 						</div>
 					</div>
@@ -263,50 +268,55 @@
 							(based on the last question)</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="what_purpose_limit_sharing">
-								Everyday Business
+								value="open_account" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_1"> Everyday Business
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="what_purpose_limit_sharing">
-								Marketing
+								value="deposit_money" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_2"> Marketing
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing">
-								Joint Marketing with Other Financial Companies
+								value="pay_bills" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_3"> Joint Marketing with Other
+								Financial Companies
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing">
-								Affiliates Everyday Business Purposes (Information about
-								customers' transactions and experiences)
+								value="pay_bills" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_4"> Affiliates Everyday
+								Business Purposes (Information about customers' transactions and
+								experiences)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing">
-								Affiliates Everyday Business Purposes (Information about
-								customers' creditworthiness)
+								value="pay_bills" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_5"> Affiliates Everyday
+								Business Purposes (Information about customers'
+								creditworthiness)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing">
-								Nonaffiliates to Market to Customers
+								value="pay_bills" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_6"> Nonaffiliates to Market to
+								Customers
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing">
-								Affiliates to Market to Customers
+								value="pay_bills" name="what_purpose_limit_sharing"
+								id="purpose_limit_option_7"> Affiliates to Market to
+								Customers
 							</label>
 						</div>
 					</div>
 
-					<div class="question">
+					<div class="question" id="opt_out_option">
 						<h5>- What opt-out option do you provide?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="mail_in_option"> Phone
+								value="Phone" name="mail_in_option"> Phone
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="mail_in_option"> Website
+								value="Website" name="mail_in_option"> Website
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="mail_in_option"> Mail-in
+								value="Mail-in" name="mail_in_option"> Mail-in
 							</label>
 						</div>
 					</div>
 
 
-					<div class="question">
+					<div class="question" id="duration">
 						<h5>- How long do you limit the sharing information?</h5>
 						<div class="option">
-							<input type="text" class="form-control" id="how"
+							<input type="text" class="form-control"
 								placeholder="Sharing Duration">
 						</div>
 					</div>
