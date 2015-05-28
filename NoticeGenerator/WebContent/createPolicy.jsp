@@ -299,7 +299,7 @@
 						</div>
 					</div>
 
-					<div class="question" id="opt_out_option">
+					<div class="question" id="opt_out_option" style="display:none">
 						<h5>- What opt-out option do you provide?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -313,7 +313,7 @@
 					</div>
 
 
-					<div class="question" id="duration">
+					<div class="question" id="duration" style="display:none">
 						<h5>- How long do you limit the sharing information?</h5>
 						<div class="option">
 							<input type="text" class="form-control"

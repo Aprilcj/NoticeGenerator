@@ -1,23 +1,40 @@
 $(function() {
 	var opt_out_option;
 
-	$('#affiliate_option input[type=radio]').change(function() {
-		var option = $(this).val();
-		if (option == "Yes") {
-			$('#affiliate_share').attr('disabled',false);
-			$('#affiliate_share_limit').attr('disabled',false);
-		} else {
-			$('#affiliate_share').attr('disabled',true);
-			$('#affiliate_share_limit').attr('disabled',true);
-		}
+	$('#what_purpose_limit_div input[type=checkbox]').each(function(index) {
+		$(this).attr('disabled', true);
 	});
 
+	$('#what_purpose_div input[type=checkbox]').change(function() {
+		$('#what_purpose_div input[type=checkbox]').each(function(index) {
+			if($('#what_purpose_div input[type=checkbox]').get(index).checked) {
+				$('#what_purpose_limit_div input[type=checkbox]').get(index).disabled = false;
+			}	
+		});	
+	});
 	
-
+	
+	$('#what_purpose_limit_div input[type=checkbox]').change(function() {
+		var empty = true;
+		$('#what_purpose_limit_div input[type=checkbox]').each(function(index) {
+			if($('#what_purpose_limit_div input[type=checkbox]').get(index).checked) {
+				empty = false;
+			}	
+		});	
+		
+		if (!empty) {
+			$('#opt_out_option').show('fast');
+			$('#duration').show('fast');
+		} else {
+			$('#opt_out_option').hide('fast');
+			$('#duration').hide('fast');
+		}
+	});
+	
 
 	$('h5').hover(function() {
 		var offset = $(this).offset();
-		//var length = $(this).width() + offset.left;
+		// var length = $(this).width() + offset.left;
 		$(this).append('<span id="tips">haha</span>');
 		$('#tips').fadeIn(200).addClass('showTooltip');
 		$('#tips').css('left', offset.left + 'px');
@@ -45,12 +62,13 @@ $(function() {
 				} else {
 					element.checked = false;
 				}
-			}else if (element.type == "checkbox") {
+			} else if (element.type == "checkbox") {
 				if (contains(data[element.name], element.value)) {
 					element.checked = true;
-				}else{
+				} else {
 					element.checked = false;
-				};
+				}
+				;
 			}
 		}
 	}
@@ -72,11 +90,13 @@ function getFormData() {
 			}
 		} else if (element.type == "checkbox") {
 			if (!formData[element.name]) {
-				formData[element.name] = [];	
-			};
+				formData[element.name] = [];
+			}
+			;
 			if (element.checked) {
 				formData[element.name].push(element.value);
-			};
+			}
+			;
 		}
 	}
 	console.log(formData);
@@ -88,38 +108,39 @@ function getFormData() {
 	var hiddenField = document.createElement("input");
 	hiddenField.setAttribute("type", "hidden");
 	hiddenField.setAttribute("name", "content");
-	hiddenField.setAttribute("value", encodeURIComponent(JSON.stringify(formData)));
+	hiddenField.setAttribute("value", encodeURIComponent(JSON
+			.stringify(formData)));
 	form.appendChild(hiddenField);
 	document.body.appendChild(form);
 	form.submit();
 }
 
-function download(){
+function download() {
 	var file = document.getElementById("notice").innerHTML;
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "download.do");
 
 	var hiddenField = document.createElement("input");
-	hiddenField.setAttribute("type","hidden");
+	hiddenField.setAttribute("type", "hidden");
 	hiddenField.setAttribute("name", "content");
 	hiddenField.setAttribute("value", file);
 	form.appendChild(hiddenField);
 	document.body.appendChild(form);
-	form.submit();		
+	form.submit();
 }
 
-function configuration(){
+function configuration() {
 	var data = document.getElementById("toshow").value;
 	console.log("data:");
 	console.log(data);
-	
+
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "configuration.do");
 
 	var hiddenField = document.createElement("input");
-	hiddenField.setAttribute("type","hidden");
+	hiddenField.setAttribute("type", "hidden");
 	hiddenField.setAttribute("name", "content");
 	hiddenField.setAttribute("value", data);
 	form.appendChild(hiddenField);
@@ -128,11 +149,12 @@ function configuration(){
 }
 
 function contains(array, obj) {
-	for (var i = 0; array && i < array.length; i++) {
+	for ( var i = 0; array && i < array.length; i++) {
 		if (array[i] === obj) {
 			return true;
-		};
-	};
+		}
+		;
+	}
+	;
 	return false;
 }
-
