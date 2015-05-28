@@ -194,7 +194,14 @@
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="use_card" name="other_information"> Use Debit or
 								Credit Card
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								value="use_card" name="other_information"> Make Deposits
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								value="use_card" name="other_information"> Withdrawls from your Account
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								value="use_card" name="other_information"> Seek Advice about Investment
 							</label>
+											
 						</div>
 					</div>
 
