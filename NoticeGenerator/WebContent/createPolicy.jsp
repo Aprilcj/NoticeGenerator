@@ -391,7 +391,7 @@
 						<input type="hidden" id="content" value="${configuration}" />
 					</c:if>
 
-					<button class="btn btn-info" onclick="getFormData()"
+					<button type="button" class="btn btn-info" onclick="getFormData()"
 						style="margin-top: 20px;">Generate Policy</button>
 
 				</form>
