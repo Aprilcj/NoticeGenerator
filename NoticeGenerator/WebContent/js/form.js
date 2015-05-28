@@ -1,7 +1,8 @@
 $(function() {
+	var opt_out_option;
 	$('#opt_out_option input[type=radio]').change(function() {
-		var option = $(this).val();
-		if (option == "yes") {
+		opt_out_option = $(this).val();
+		if (opt_out_option == "Yes") {
 			$('#mail_in_option').show("fast");
 		} else {
 			$('#mail_in_option').hide("fast");
@@ -10,7 +11,7 @@ $(function() {
 
 	$('#affiliate_option input[type=radio]').change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes") {
 			$('#reason_q6').show("fast");
 		} else {
 			$('#reason_q6').hide("fast");
@@ -19,7 +20,7 @@ $(function() {
 
 	$('#reason_q1 input[type=radio]').change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes" && opt_out_option == "Yes") {
 			$('#reason_q1_follow').show("fast");
 		} else {
 			$('#reason_q1_follow').hide("fast");
@@ -28,7 +29,7 @@ $(function() {
 
 	$('#reason_q2 input[type=radio]').change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes" && opt_out_option == "Yes") {
 			$('#reason_q2_follow').show("fast");
 		} else {
 			$('#reason_q2_follow').hide("fast");
@@ -37,43 +38,43 @@ $(function() {
 
 	$('#reason_q3 input[type=radio]').change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes" && opt_out_option == "Yes") {
 			$('#reason_q3_follow').show("fast");
 		} else {
 			$('#reason_q3_follow').hide("fast");
 		}
 	});
 
-	$('#reason_q4 input[type=radio]').change(function() {
+	$('#reason_q4 input[type=radio]' && opt_out_option == "Yes").change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes") {
 			$('#reason_q4_follow').show("fast");
 		} else {
 			$('#reason_q4_follow').hide("fast");
 		}
 	});
 
-	$('#reason_q5 input[type=radio]').change(function() {
+	$('#reason_q5 input[type=radio]' && opt_out_option == "Yes").change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes") {
 			$('#reason_q5_follow').show("fast");
 		} else {
 			$('#reason_q5_follow').hide("fast");
 		}
 	});
 
-	$('#reason_q6 input[type=radio]').change(function() {
+	$('#reason_q6 input[type=radio]' && opt_out_option == "Yes").change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes") {
 			$('#reason_q6_follow').show("fast");
 		} else {
 			$('#reason_q6_follow').hide("fast");
 		}
 	});
 
-	$('#reason_q7 input[type=radio]').change(function() {
+	$('#reason_q7 input[type=radio]' && opt_out_option == "Yes").change(function() {
 		var option = $(this).val();
-		if (option == "yes") {
+		if (option == "Yes") {
 			$('#reason_q7_follow').show("fast");
 		} else {
 			$('#reason_q7_follow').hide("fast");
