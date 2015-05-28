@@ -119,15 +119,14 @@
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								marketing purposes</strong> &mdash; to offer our products and services to
 							you</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Yes</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">No</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question6}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question7}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For joint
 								marketing with other financial companies</strong></td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">No</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We don't
-							share</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question8}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question9}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our

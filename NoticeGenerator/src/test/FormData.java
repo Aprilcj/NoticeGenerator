@@ -58,6 +58,11 @@ public class FormData {
 		this.question4 = question4;
 	}
 	public String getQuestion5() {
+		if(question1.equals("No")){
+			question5 = "No";
+		} else if(question4.equals("No")){
+			question5 = "we don't share";
+		}
 		return question5;
 	}
 	public void setQuestion5(String question5) {
@@ -70,6 +75,11 @@ public class FormData {
 		this.question6 = question6;
 	}
 	public String getQuestion7() {
+		if(question1.equals("No")){
+			question7 = "No";
+		} else if(question6.equals("No")){
+			question7 = "we don't share";
+		}
 		return question7;
 	}
 	public void setQuestion7(String question7) {
@@ -82,6 +92,11 @@ public class FormData {
 		this.question8 = question8;
 	}
 	public String getQuestion9() {
+		if(question1.equals("No")){
+			question9 = "No";
+		} else if(question8.equals("No")){
+			question9 = "we don't share";
+		}
 		return question9;
 	}
 	public void setQuestion9(String question9) {
@@ -94,6 +109,11 @@ public class FormData {
 		this.question10 = question10;
 	}
 	public String getQuestion11() {
+		if(question1.equals("No")){
+			question11 = "No";
+		} else if(question10.equals("No")){
+			question11 = "we don't share";
+		}
 		return question11;
 	}
 	public void setQuestion11(String question11) {
@@ -106,6 +126,11 @@ public class FormData {
 		this.question12 = question12;
 	}
 	public String getQuestion13() {
+		if(question1.equals("No")){
+			question13 = "No";
+		} else if(question12.equals("No")){
+			question13 = "we don't share";
+		}
 		return question13;
 	}
 	public void setQuestion13(String question13) {
@@ -118,6 +143,11 @@ public class FormData {
 		this.question14 = question14;
 	}
 	public String getQuestion15() {
+		if(question1.equals("No")){
+			question15 = "No";
+		} else if(question14.equals("No")){
+			question15 = "we don't share";
+		}
 		return question15;
 	}
 	public void setQuestion15(String question15) {
@@ -130,6 +160,11 @@ public class FormData {
 		this.question16 = question16;
 	}
 	public String getQuestion17() {
+		if(question1.equals("No")){
+			question17 = "No";
+		} else if(question16.equals("No")){
+			question17 = "we don't share";
+		}
 		return question17;
 	}
 	public void setQuestion17(String question17) {
