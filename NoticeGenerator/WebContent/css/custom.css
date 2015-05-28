@@ -1,22 +1,30 @@
+#titlebar {
+	text-align: left;
+	font-weight: bold;
+	background-color: #9dddd4;
+	color: white;
+}
+
 body {
 	padding-top: 50px;
 }
 
 .starter-template {
 	padding: 40px 15px;
-	text-align: center;
 }
 
 .post_new {
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	width: 70%;
 }
 
 .post_new input[type=file] {
 	display: inline;
 	margin-top: 10px;
+	float: left;
+	margin-left: 2%;
+	margin-right: 15%;
 }
 
 .post_new h4 {
@@ -38,11 +46,11 @@ body {
 }
 
 .question {
-	border-bottom: solid 1px RGB(238, 238, 238);
+	margin-bottom: 5%;
 }
 
 .question input[type="text"] {
-	width: 50%;
+	width: 70%;
 	margin-bottom: 5px;
 }
 
@@ -57,11 +65,13 @@ body {
 }
 
 .option label.checkbox-inline {
-	margin-right: 3%;
 	font-weight: 200;
+	display: block;
+	margin-left: 3%;
+	margin-bottom: 2%;
 }
 
-h5 + span {
+h5+span {
 	display: none;
 }
 
