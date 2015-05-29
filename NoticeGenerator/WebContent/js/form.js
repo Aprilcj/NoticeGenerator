@@ -121,15 +121,49 @@ function checkWebsite() {
 }
 
 function check_what() {
-	
+	var count = 0;
+	$('#what_to_collect input[type=checkbox]').each(function(index) {
+		if (this.checked) {
+			count++
+		}
+	});
+
+	if (count < 5) {
+		console.log('Less than five options are selected');
+		return false;
+	} else {
+		return true;
+	}
 }
 
 function check_when() {
-	
+	var count = 0;
+	$('#when_to_collect input[type=checkbox]').each(function(index) {
+		if (this.checked) {
+			count++
+		}
+	});
+
+	if (count < 5) {
+		console.log('Less than five options are selected');
+		return false;
+	} else {
+		return true;
+	}
 }
 
 function missingFieldCheck() {
-
+	var msg = "";
+	$('.question input[type=text]').each(function(index) {
+		if(this.value == "") {
+			msg += $(this).parent().prev().text().replace("?", "") + " part is missing \n";
+		}
+		
+	});
+	
+	$('.question ')
+	
+	console.log(msg);
 }
 
 function getFormData() {

@@ -143,7 +143,7 @@
 						<li>COLLECTING CUSTOMER'S INFORMATION</li>
 					</ol>
 
-					<div class="question" id="what_to_collect">
+					<div class="question_check" id="what_to_collect">
 						<h5>- What kind of customer's personal information you want
 							to collect?</h5>
 						<div class="option">
@@ -208,7 +208,7 @@
 					</div>
 
 
-					<div class="question">
+					<div class="question" id="where_to_collect">
 						<h5>- Where will you collect informaton from?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -229,7 +229,7 @@
 					</ol>
 
 
-					<div class="question">
+					<div class="question" id="what_purpose">
 						<h5>- What purpose do you share information?</h5>
 						<div class="option" id="what_purpose_div">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -263,7 +263,7 @@
 					</div>
 
 
-					<div class="question" id="what_purpose_limit_sharing">
+					<div class="question_optional" id="what_purpose_limit_sharing">
 						<h5>- Do you limit your sharing on the following purpose?
 							(based on the last question)</h5>
 						<div class="option" id="what_purpose_limit_div">
@@ -299,7 +299,7 @@
 						</div>
 					</div>
 
-					<div class="question" id="opt_out_option" style="display:none">
+					<div class="question_optional" id="opt_out_option" style="display:none">
 						<h5>- What opt-out option do you provide?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -313,7 +313,7 @@
 					</div>
 
 
-					<div class="question" id="duration" style="display:none">
+					<div class="question_optional" id="duration" style="display:none">
 						<h5>- How long do you limit the sharing information?</h5>
 						<div class="option">
 							<input type="text" class="form-control"

@@ -49,7 +49,16 @@ body {
 	margin-bottom: 5%;
 }
 
+.question_optional {
+	margin-bottom: 5%;
+}
+
 .question input[type="text"] {
+	width: 70%;
+	margin-bottom: 5px;
+}
+
+.question_optional input[type="text"] {
 	width: 70%;
 	margin-bottom: 5px;
 }
