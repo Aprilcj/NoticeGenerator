@@ -154,27 +154,27 @@
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_marketing()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#joint"> joint
+							<td class=" borderBottom-bfbfbf"><strong>For <a href="#joint"> joint
 									marketing </a> with other financial companies</strong></td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getJoint_marketing()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_joint_marketing()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#affilia">our
+							<td class=" borderBottom-bfbfbf"><strong>For <a href="#affilia">our
 									affiliates'</a> everyday business purposes</strong> &mdash; information
 								about your transactions and experiences</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_transactions()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_transactions()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#affilia">our
+							<td class=" borderBottom-bfbfbf"><strong>For <a href="#affilia">our
 									affiliates'</a> everyday business purposes</strong> &mdash; information
 								about your creditworthiness</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_creditworthiness()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_creditworthiness()}</td>
 						</tr>
 						<tr>
-							<td class=""><strong>For <a herf="#nonaffilia">nonaffiliates </a> to market to
+							<td class=""><strong>For <a href="#nonaffilia">nonaffiliates </a> to market to
 									you</strong></td>
 							<td class="borderLeft-bfbfbf">${formdata.getNonaffiliates_to_market()}<sup
 								class="font-14px">*</sup></td>
