@@ -134,9 +134,7 @@ $(function() {
 					});
 
 	var configuration = document.getElementById("refillConfiguration");
-	console.log("shit");
 	if (configuration) {
-		console.log("hahha");
 		var data = JSON.parse(decodeURIComponent(configuration.value));
 		console.log(data);
 
@@ -376,7 +374,6 @@ function getFormData() {
 			;
 		}
 	}
-	console.log(formData);
 
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
@@ -393,7 +390,7 @@ function getFormData() {
 }
 
 function download() {
-	var file = document.getElementById("todownload").innerHTML;
+	var file = document.documentElement.innerHTML;
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "download.do");
@@ -401,7 +398,7 @@ function download() {
 	var hiddenField = document.createElement("input");
 	hiddenField.setAttribute("type", "hidden");
 	hiddenField.setAttribute("name", "content");
-	hiddenField.setAttribute("value", file);
+	hiddenField.setAttribute("value", encodeURIComponent(file));
 	form.appendChild(hiddenField);
 	document.body.appendChild(form);
 	form.submit();
@@ -409,8 +406,6 @@ function download() {
 
 function configuration() {
 	var data = document.getElementById("toshow").value;
-	console.log("data:");
-	console.log(data);
 
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
