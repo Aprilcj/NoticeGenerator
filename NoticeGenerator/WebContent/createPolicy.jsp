@@ -143,7 +143,7 @@
 						<li>COLLECTING CUSTOMER'S INFORMATION</li>
 					</ol>
 
-					<div class="question">
+					<div class="question" id="what_to_collect">
 						<h5>- What kind of customer's personal information you want
 							to collect?</h5>
 						<div class="option">
@@ -177,7 +177,7 @@
 						</div>
 					</div>
 
-					<div class="question">
+					<div class="question" id="when_to_collect">
 						<h5>- When will you collect information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
