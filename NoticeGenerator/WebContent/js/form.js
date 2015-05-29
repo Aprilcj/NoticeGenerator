@@ -5,32 +5,49 @@ $(function() {
 		$(this).attr('disabled', true);
 	});
 
-	$('#what_purpose_div input[type=checkbox]').change(function() {
-		$('#what_purpose_div input[type=checkbox]').each(function(index) {
-			if($('#what_purpose_div input[type=checkbox]').get(index).checked) {
-				$('#what_purpose_limit_div input[type=checkbox]').get(index).disabled = false;
-			}	
-		});	
-	});
-	
-	
-	$('#what_purpose_limit_div input[type=checkbox]').change(function() {
-		var empty = true;
-		$('#what_purpose_limit_div input[type=checkbox]').each(function(index) {
-			if($('#what_purpose_limit_div input[type=checkbox]').get(index).checked) {
-				empty = false;
-			}	
-		});	
-		
-		if (!empty) {
-			$('#opt_out_option').show('fast');
-			$('#duration').show('fast');
-		} else {
-			$('#opt_out_option').hide('fast');
-			$('#duration').hide('fast');
-		}
-	});
-	
+	$('#what_purpose_div input[type=checkbox]')
+			.change(
+					function() {
+						$('#what_purpose_div input[type=checkbox]')
+								.each(
+										function(index) {
+											if ($(
+													'#what_purpose_div input[type=checkbox]')
+													.get(index).checked) {
+												$(
+														'#what_purpose_limit_div input[type=checkbox]')
+														.get(index).disabled = false;
+											} else {
+												$(
+														'#what_purpose_limit_div input[type=checkbox]')
+														.get(index).disabled = true;
+											}
+
+										});
+					});
+
+	$('#what_purpose_limit_div input[type=checkbox]')
+			.change(
+					function() {
+						var empty = true;
+						$('#what_purpose_limit_div input[type=checkbox]')
+								.each(
+										function(index) {
+											if ($(
+													'#what_purpose_limit_div input[type=checkbox]')
+													.get(index).checked) {
+												empty = false;
+											}
+										});
+
+						if (!empty) {
+							$('#opt_out_option').show('fast');
+							$('#duration').show('fast');
+						} else {
+							$('#opt_out_option').hide('fast');
+							$('#duration').hide('fast');
+						}
+					});
 
 	$('h5').hover(function() {
 		var offset = $(this).offset();
@@ -74,6 +91,46 @@ $(function() {
 	}
 
 });
+
+function checkNumber() {
+	var phone = $('#phone').val();
+	var intReg = /^\d+$/;
+	if (!intReg.test(phone)) {
+		console.log("Please enter a valid Number.");
+		return false;
+	} else {
+		return true;
+	}
+
+}
+
+function checkWebsite() {
+	var str = $('#website').val();
+	var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+	'((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+	'((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+	'(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+	'(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+	'(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+	if (!pattern.test(str)) {
+		console.log("Please enter a valid URL.");
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function check_what() {
+	
+}
+
+function check_when() {
+	
+}
+
+function missingFieldCheck() {
+
+}
 
 function getFormData() {
 	var formData = new Object();
