@@ -77,7 +77,13 @@ public class NoticeData {
 	public String limit_affiliates_creditworthiness;
 	public String limit_nonaffiliates_to_market;
 	public String limit_affiliates_to_market;
-	
+	public String joint_option;
+	public String getJoint_option() {
+		return joint_option;
+	}
+	public void setJoint_option(String joint_option) {
+		this.joint_option = joint_option;
+	}
 	public String getInstitute() {
 		return institute;
 	}

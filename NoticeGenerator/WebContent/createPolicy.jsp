@@ -208,15 +208,15 @@
 					<div class="question" id="where_to_collect">
 						<h5>- Where will you collect informaton from?</h5>
 						<div class="option">
-							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="where_to_collect"> Other
-								Companies
-							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="where_to_collect"> Credit
+                            <label class="checkbox-inline"> <input type="checkbox"
+								value="credit bureaus" name="where_to_collect"> Credit
 								Bureaus
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="where_to_collect"> Affiliates
-							</label>
+								value="affiliates" name="where_to_collect"> Affiliates
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								value="other companies" name="where_to_collect"> Other
+								Companies
+							</label> 
 						</div>
 					</div>
 
@@ -327,10 +327,10 @@
 						<h5>- What happens when the customer has a joint account?</h5>
 						<div class="option">
 							<label class="radio-inline"> <input type="radio"
-								name="joint_option" value="option_1"> Your choices will
+								name="joint_option" value="Yes"> Your choices will
 								apply to everyone on your account
 							</label> <label class="radio-inline"> <input type="radio"
-								name="joint_option" value="option_2"> Your choices will
+								name="joint_option" value="No"> Your choices will
 								apply to everyone on your account - unless told otherwise
 							</label>
 						</div>
