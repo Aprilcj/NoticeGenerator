@@ -20,8 +20,15 @@ public class FormData {
 	public List<String> what_purpose_limit_sharing;
 	public List<String> mail_in_option;
 	public String duration;
+	public String joint_option;
 	public String getInstitute() {
 		return institute;
+	}
+	public String getJoint_option() {
+		return joint_option;
+	}
+	public void setJoint_option(String joint_option) {
+		this.joint_option = joint_option;
 	}
 	public void setInstitute(String institute) {
 		this.institute = institute;

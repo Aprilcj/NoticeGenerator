@@ -184,9 +184,39 @@
 				</table>
 			</div>
 
+<<<<<<< HEAD
 			<div class="prepend-top-10px">
 				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
 					cellspacing="0">
+=======
+		<div class="prepend-top-10px">
+			<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td class=" borderBottom-bfbfbf"><p>
+							<strong>To limit our sharing</strong>
+						</p></td>
+					<td class="borderLeft-bfbfbf borderBottom-bfbfbf"><ul
+							class="generalList prepend-top-5px margin-0px">
+							<li>Call ${formdata.getPhone()}&mdash; our menu will prompt you
+								through your choice or</li>
+							<li>Visit us online: <a
+								title="http://www.usbank.com/privacy" href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
+								and tell us your preference on the "Exercise Your Privacy
+								Choice" page.
+							</li>
+						</ul>
+						<p class="prepend-top-10px">
+							<strong>Please note:</strong> If you are a <em>new customer</em>,
+							we can begin sharing your information ${formdata.getDuration()} days from the date we
+							sent this notice. When you are <em>no longer</em> our customer,
+							we continue to share your information as described in this
+							notice. However, you can contact us at any time to limit our
+							sharing.
+						</p></td>
+				</tr>
+				<tbody>
+>>>>>>> origin/master
 					<tr>
 						<td class=" borderBottom-bfbfbf"><p>
 								<strong>To limit our sharing</strong>
@@ -250,6 +280,7 @@
 				</table>
 			</div>
 
+<<<<<<< HEAD
 			<div class="prepend-top-10px">
 				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
 					cellspacing="0">
@@ -334,6 +365,91 @@
 					</tbody>
 				</table>
 			</div>
+=======
+		<div class="prepend-top-10px">
+			<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
+				cellspacing="0">
+				<thead>
+					<tr>
+						<th class=" borderBottom-bfbfbf"><p>Who we are</p></th>
+						<th class="borderLeft-bfbfbf borderBottom-bfbfbf"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class=""><p>
+								<strong>Who is providing this notice?</strong>
+							</p></td>
+						<td class="borderLeft-bfbfbf"><p>Companies with ${formdata.getInstitute()} and other affiliates. Please see
+								below for a list of other affiliates that do not have a ${formdata.getInstitute()} name.</p>
+							<p>
+								${formdata.getWho()}
+							</p></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="prepend-top-10px">
+			<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
+				cellspacing="0">
+				<thead>
+					<tr>
+						<th class=" borderBottom-bfbfbf"><strong>What we do</strong></th>
+						<th class="borderLeft-bfbfbf borderBottom-bfbfbf">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class=" borderBottom-bfbfbf"><strong>How does
+								${formdata.getInstitute()} protect my personal information?</strong></td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">To protect
+							your personal information from unauthorized access and use, we
+							use security measures that comply with federal law. These
+							measures include computer safeguards and secured files and
+							buildings. In addtion, ${formdata.getHow()}</td>
+					</tr>
+					<tr>
+						<td class=" borderBottom-bfbfbf"><strong>How does
+								${formdata.getInstitute()} collect my personal information?</strong></td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
+							your personal information, for example, when you
+							<ul class="mortgageList prepend-top-5px margin-0px">
+								<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+                                   <c:forEach var="item" items="${formdata.getOther_information()}">
+                                     <li>${item}</li>
+                                   </c:forEach>
+								<li>tell us about your investment or retirement portfolio</li>
+							</ul> We also collect your personal information from <c:forEach var="item" items="${formdata.getOther_information()}">
+                                     <li>${item}</li>
+                                   </c:forEach>
+						</td>
+					</tr>
+					<tr>
+						<td class=" borderBottom-bfbfbf"><strong>Why can't I
+								limit all sharing?</strong></td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Federal law
+							gives you the right to limit only
+							<ul class="mortgageList prepend-top-5px margin-0px">
+								<li>sharing for affiliates' everyday business
+									purposes&mdash;information about your creditworthiness</li>
+								<li>affiliates from using your information to market to you</li>
+								<li>sharing for nonaffiliates to market to you</li>
+							</ul> State laws and individual companies may give you additional
+							rights to limit sharing. See below for more on your rights under
+							state law.
+						</td>
+					</tr>
+					<tr>
+						<td class=""><strong>What happens when I limit
+								sharing for an account I hold jointly with someone else?</strong></td>
+						<td class="borderLeft-bfbfbf">Your choices will apply
+							individually&mdash;unless you tell us otherwise.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+>>>>>>> origin/master
 
 			<div class="prepend-top-10px">
 				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
