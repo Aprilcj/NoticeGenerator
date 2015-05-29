@@ -18,7 +18,7 @@ public class Download extends HttpServlet{
 		System.out.print("doPost");
 		String data = request.getParameter("content");
 		System.out.print(data);
-		response.setHeader("Content-Disposition","attachment; filename=\"" + "xxx\"");
+		response.setHeader("Content-Disposition","attachment; filename=\"" + "privacy_notice\"");
         response.getWriter().print(data);
 	}
 

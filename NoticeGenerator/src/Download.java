@@ -16,7 +16,7 @@ public class Download extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String data = request.getParameter("content");
-		response.setHeader("Content-Disposition","attachment; filename=\"" + "xxx.html\"");
+		response.setHeader("Content-Disposition","attachment; filename=\"" + "privacy_notice.html\"");
         response.getWriter().print(data);
 	}
 

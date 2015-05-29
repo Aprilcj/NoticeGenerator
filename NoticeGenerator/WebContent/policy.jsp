@@ -10,9 +10,9 @@
 <title>Online Privacy Policy Generator</title>
 
 <!-- Bootstrap core CSS -->
-<link href="css/common.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
+<link href="http://54.84.113.159:8080/NoticeGenerator/css/common.css" rel="stylesheet">
+<link href="http://54.84.113.159:8080/NoticeGenerator/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://54.84.113.159:8080/NoticeGenerator/css/custom.css" rel="stylesheet">
 
 
 <%
