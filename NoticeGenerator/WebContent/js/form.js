@@ -1,4 +1,19 @@
 $(function() {
+	
+	var display = false;
+	$('#full_list').click(function() {
+		if (!display) {
+			display = true;
+			$('.hidden_option').show('fast');
+		} else {
+			display = false;
+			$('.hidden_option').hide('fast');
+		}
+		
+		
+		
+	});
+
 	var opt_out_option;
 
 	$('#what_purpose_limit_div input[type=checkbox]').each(function(index) {
