@@ -24,12 +24,11 @@ public class Service extends HttpServlet {
 		data = urlDecode(data);
 		FormData formData = new Gson().fromJson(data.toString(),
 				FormData.class);
+		System.out.println(formData.institute);
+		System.out.println(formData.personal_information.get(0));
 		
 		request.setAttribute("formdata", formData);
 		request.setAttribute("test", formData.personal_information.get(0));
-		for(int i = 0; i< formData.getPersonal_information().size(); i++){
-			System.out.println(formData.getPersonal_information().get(i));
-		}
 		RequestDispatcher d = request.getRequestDispatcher("policy.jsp");
 		d.forward(request, response);
 	}

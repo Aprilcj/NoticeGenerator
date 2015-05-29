@@ -145,8 +145,8 @@
 					<tr>
 						<td class=""><strong>For nonaffiliates to market to
 								you</strong></td>
-						<td class="borderLeft-bfbfbf">${formdata.question14}<sup class="font-14px">*</sup></td>
-						<td class="borderLeft-bfbfbf">We dont share</td>
+						<td class="borderLeft-bfbfbf">${formdata.question16}<sup class="font-14px">*</sup></td>
+						<td class="borderLeft-bfbfbf">${formdata.question17}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -161,10 +161,10 @@
 						</p></td>
 					<td class="borderLeft-bfbfbf borderBottom-bfbfbf"><ul
 							class="generalList prepend-top-5px margin-0px">
-							<li>Call 800-370-8580&mdash; our menu will prompt you
+							<li>Call ${formdata.getPhone()}&mdash; our menu will prompt you
 								through your choice or</li>
 							<li>Visit us online: <a
-								title="http://www.usbank.com/privacy" href="/privacy/index.html">http://www.usbank.com/privacy</a>
+								title="http://www.usbank.com/privacy" href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
 								and tell us your preference on the "Exercise Your Privacy
 								Choice" page.
 							</li>
@@ -192,7 +192,7 @@
 							</p>
 							<ul class="mortgageList prepend-top-10px margin-0px">
 								<li>To limit our direct marketing to you by mail or
-									telephone, please call 800-370-8580--our menu will prompt you
+									telephone, please call ${formdata.getPhone()}--our menu will prompt you
 									through your choices, or visit us online: <a
 									title="http://www.usbank.com/privacy"
 									href="/privacy/index.html">http://www.usbank.com/privacy</a>
@@ -201,7 +201,7 @@
 								</li>
 								<li>To limit our direct marketing to you by e-mail, visit
 									us online: <a title="http://www.usbank.com/privacy"
-									href="/privacy/index.html">http://www.usbank.com/privacy</a>
+									href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
 									and tell us your preference on the "Email Preferences" page.
 								</li>
 							</ul></td>
@@ -210,8 +210,8 @@
 						<td class=""><p>
 								<strong>Questions?</strong>
 							</p></td>
-						<td class="borderLeft-bfbfbf"><p>Call 800-872-2657 or go
-								to usbank.com</p></td>
+						<td class="borderLeft-bfbfbf"><p>Call ${formdata.getPhone()} or go
+								to ${formdata.getWebsite()}</p></td>
 					</tr>
 				</tbody>
 			</table>
@@ -231,19 +231,10 @@
 						<td class=""><p>
 								<strong>Who is providing this notice?</strong>
 							</p></td>
-						<td class="borderLeft-bfbfbf"><p>Companies with the U.S.
-								Bank and U.S. Bancorp names and other affiliates. Please see
-								below for a list of other affiliates that do not have a U.S.
-								Bank or U.S. Bancorp name.</p>
+						<td class="borderLeft-bfbfbf"><p>Companies with ${formdata.getInstitute()} and other affiliates. Please see
+								below for a list of other affiliates that do not have a getInstitute() name.</p>
 							<p>
-								Except for California, North Dakota and Vermont residents, a
-								different notice applies to customers who leased or purchased a
-								vehicle and obtained ${formdata.getInstitute()} financing
-								directly through a dealership. That notice from
-								${formdata.getInstitute()}--Dealer Financial Services is
-								available online at <a title="http://www.usbank.com/privacy"
-									href="/privacy">http://www.usbank.com/privacy</a> or by calling
-								800-437-9497.
+								${formdata.getWho()}
 							</p></td>
 					</tr>
 				</tbody>
@@ -267,7 +258,7 @@
 							your personal information from unauthorized access and use, we
 							use security measures that comply with federal law. These
 							measures include computer safeguards and secured files and
-							buildings.</td>
+							buildings. ${formdata.getHow()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
@@ -275,9 +266,10 @@
 						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
 							your personal information, for example, when you
 							<ul class="mortgageList prepend-top-5px margin-0px">
-								<li>${test}</li>
-								<li>use your credit or debit card or make deposits or
-									withdrawals from your account</li>
+								<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+                                   <c:forEach var="item" items="${formdata.getOther_information()}">
+                                     <li>${item}</li>
+                                   </c:forEach>
 								<li>tell us about your investment or retirement portfolio</li>
 							</ul> We also collect your personal information from others, such as
 							credit bureaus, affiliates, or other companies.
