@@ -326,15 +326,12 @@
 							value="${configuration}" />
 					</c:if>
 					
-					<div class="question">
-						<label class="checkbox-inline" id="warning_msg">
-						
-						</label>
+					<div class="warning_msg">
 						
 					</div>
 
 					<button type="button" class="btn btn-info" onclick="getFormData()"
-						style="margin-top: 20px;">Preview</button>
+						style="margin-top: 20px;   margin-left: 40%;">Preview</button>
 
 				</form>
 			</div>
