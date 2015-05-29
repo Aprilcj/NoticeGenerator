@@ -1,5 +1,5 @@
 $(function() {
-	
+
 	var display = false;
 	$('#full_list').click(function() {
 		if (!display) {
@@ -8,9 +8,8 @@ $(function() {
 		} else {
 			display = false;
 			$('.hidden_option').hide('fast');
-		}	
+		}
 	});
-	
 
 	var opt_out_option;
 
@@ -82,7 +81,7 @@ $(function() {
 						if (!empty) {
 							$('#joint_account').show('fast');
 							$('#duration').show('fast');
-							$('#address').show('fast');
+							//$('#address').show('fast');
 							$('#opt_out_option').show('fast');
 						} else {
 							$('#joint_account').hide('fast');
@@ -91,38 +90,48 @@ $(function() {
 							$('#opt_out_option').hide('fast');
 						}
 					});
-	
-	$('#opt_out_option input').change(function () {
+
+	$('#opt_out_option input').change(function() {
 		if ($('#mail_in_check_option').prop('checked')) {
 			$('#address').show('fast');
 		} else {
 			$('#address').hide('fast');
 		}
-			
-	}); 
 
-	$('h5').hover(function() {
-		var offset = $(this).offset();
-		// var length = $(this).width() + offset.left;
-		if ($(this).attr('id') == 'what_des' || $(this).attr('id') == 'when_des') {
-			$(this).append('<span id="tips">At least select five options</span>');
-		} else if ($(this).attr('id') == 'what_purpose_des') {
-			$(this).append('<span id="tips">this option will limit the next option. If not one is selected, the next option is not optional</span>');
-		} else if ($(this).attr('id') == 'what_purpose_limit_des') {
-			$(this).append('<span id="tips">Select one of the following option means you will provide the opt-out option</span>');
-		} else if ($(this).attr('id') == 'duration_des') {
-			$(this).append('<span id="tips">Insert a number that is 30 or greater in the space marked [30].</span>');
-		} else {
-			return;
-		}
-
-
-		$('#tips').fadeIn(200).addClass('showTooltip');
-		$('#tips').css('left', offset.left + 'px');
-	}, function() {
-		$('#tips').fadeOut(200);
-		$('#tips').remove();
 	});
+
+	$('h5')
+			.hover(
+					function() {
+						var offset = $(this).offset();
+						// var length = $(this).width() + offset.left;
+						if ($(this).attr('id') == 'what_des'
+								|| $(this).attr('id') == 'when_des') {
+							$(this)
+									.append(
+											'<span id="tips">At least select five options</span>');
+						} else if ($(this).attr('id') == 'what_purpose_des') {
+							$(this)
+									.append(
+											'<span id="tips">this option will limit the next option. If not one is selected, the next option is not optional</span>');
+						} else if ($(this).attr('id') == 'what_purpose_limit_des') {
+							$(this)
+									.append(
+											'<span id="tips">Select one of the following option means you will provide the opt-out option</span>');
+						} else if ($(this).attr('id') == 'duration_des') {
+							$(this)
+									.append(
+											'<span id="tips">Insert a number that is 30 or greater in the space marked [30].</span>');
+						} else {
+							return;
+						}
+
+						$('#tips').fadeIn(200).addClass('showTooltip');
+						$('#tips').css('left', offset.left + 'px');
+					}, function() {
+						$('#tips').fadeOut(200);
+						$('#tips').remove();
+					});
 
 	var configuration = document.getElementById("refillConfiguration");
 	console.log("shit");
@@ -152,6 +161,45 @@ $(function() {
 				;
 			}
 		}
+
+		$('#what_purpose_div input[type=checkbox]')
+				.each(
+						function(index) {
+							if ($('#what_purpose_div input[type=checkbox]')
+									.get(index).checked) {
+								$(
+										'#what_purpose_limit_div input[type=checkbox]')
+										.get(index).disabled = false;
+							} else {
+								$(
+										'#what_purpose_limit_div input[type=checkbox]')
+										.get(index).disabled = true;
+								$(
+										'#what_purpose_limit_div input[type=checkbox]')
+										.get(index).checked = false;
+								var empty = true;
+								$(
+										'#what_purpose_limit_div input[type=checkbox]')
+										.each(
+												function(index) {
+													if ($(
+															'#what_purpose_limit_div input[type=checkbox]')
+															.get(index).checked) {
+														empty = false;
+													}
+												});
+
+								if (!empty) {
+									$('#opt_out_option').show('fast');
+									$('#duration').show('fast');
+								} else {
+									$('#opt_out_option').hide('fast');
+									$('#duration').hide('fast');
+								}
+
+							}
+
+						});
 	}
 
 });
