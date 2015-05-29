@@ -67,11 +67,9 @@ $(function() {
 										});
 
 						if (!empty) {
-							$('#opt_out_option').show('fast');
-							$('#duration').show('fast');
+							$('.question_optional').show('fast');
 						} else {
-							$('#opt_out_option').hide('fast');
-							$('#duration').hide('fast');
+							$('.question_optional').hide('fast');
 						}
 					});
 

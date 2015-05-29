@@ -165,8 +165,7 @@
 								value="credit scores" name="personal_information">
 								Credit Scores
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="assets" name="personal_information">
-								Assets
+								value="assets" name="personal_information"> Assets
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="employment information" name="personal_information">
 								Employment Information
@@ -192,14 +191,14 @@
 								value="apply for loan" name="other_information"> Apply
 								for Loan
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use debit or credit card" name="other_information"> Use Debit or
-								Credit Card
+								value="use debit or credit card" name="other_information">
+								Use Debit or Credit Card
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="withdrawls from your account" name="other_information"> Withdrawls
-								from your Account
+								value="withdrawls from your account" name="other_information">
+								Withdrawls from your Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="seek advice about investment" name="other_information"> Seek Advice
-								about Investment
+								value="seek advice about investment" name="other_information">
+								Seek Advice about Investment
 							</label>
 
 						</div>
@@ -266,8 +265,9 @@
 							(based on the last question)</h5>
 						<div class="option" id="what_purpose_limit_div">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="limit_everyday_business" name="what_purpose_limit_sharing"
-								id="purpose_limit_option_1"> Everyday Business
+								value="limit_everyday_business"
+								name="what_purpose_limit_sharing" id="purpose_limit_option_1">
+								Everyday Business
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="limit_marketing" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_2"> Marketing
@@ -276,28 +276,29 @@
 								id="purpose_limit_option_3"> Joint Marketing with Other
 								Financial Companies
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="limit_affiliates_transactions" name="what_purpose_limit_sharing"
-								id="purpose_limit_option_4"> Affiliates Everyday
-								Business Purposes (Information about customers' transactions and
-								experiences)
+								value="limit_affiliates_transactions"
+								name="what_purpose_limit_sharing" id="purpose_limit_option_4">
+								Affiliates Everyday Business Purposes (Information about
+								customers' transactions and experiences)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="limit_affiliates_creditworthiness" name="what_purpose_limit_sharing"
-								id="purpose_limit_option_5"> Affiliates Everyday
-								Business Purposes (Information about customers'
-								creditworthiness)
+								value="limit_affiliates_creditworthiness"
+								name="what_purpose_limit_sharing" id="purpose_limit_option_5">
+								Affiliates Everyday Business Purposes (Information about
+								customers' creditworthiness)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="limit_nonaffiliates_to_market" name="what_purpose_limit_sharing"
-								id="purpose_limit_option_6"> Nonaffiliates to Market to
-								Customers
+								value="limit_nonaffiliates_to_market"
+								name="what_purpose_limit_sharing" id="purpose_limit_option_6">
+								Nonaffiliates to Market to Customers
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="limit_affiliates_to_market" name="what_purpose_limit_sharing"
-								id="purpose_limit_option_7"> Affiliates to Market to
-								Customers
+								value="limit_affiliates_to_market"
+								name="what_purpose_limit_sharing" id="purpose_limit_option_7">
+								Affiliates to Market to Customers
 							</label>
 						</div>
 					</div>
 
-					<div class="question_optional" id="opt_out_option" style="display:none">
+					<div class="question_optional" id="opt_out_option"
+						style="display: none">
 						<h5>- What opt-out option do you provide?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -311,8 +312,9 @@
 					</div>
 
 
-					<div class="question_optional" id="duration" style="display:none">
-						<h5>- How long do you limit the sharing information?</h5>
+					<div class="question_optional" id="duration" style="display: none">
+						<h5>- How long do share the information starting from you
+							sent the notice?</h5>
 						<div class="option">
 							<input type="text" class="form-control"
 								placeholder="Sharing Duration">
@@ -320,18 +322,30 @@
 					</div>
 
 
+					<div class="question_optional" id="joint_account"
+						style="display: none">
+						<h5>- What happens when the customer has a joint account?</h5>
+						<div class="option">
+							<label class="radio-inline"> <input type="radio"
+								name="joint_option" value="option_1"> Your choices will
+								apply to everyone on your account
+							</label> <label class="radio-inline"> <input type="radio"
+								name="joint_option" value="option_2"> Your choices will
+								apply to everyone on your account - unless told otherwise
+							</label>
+						</div>
+					</div>
+
 
 					<c:if test="${configuration !=null}">
 						<input type="hidden" id="refillConfiguration"
 							value="${configuration}" />
 					</c:if>
-					
-					<div class="warning_msg">
-						
-					</div>
+
+					<div class="warning_msg"></div>
 
 					<button type="button" class="btn btn-info" onclick="getFormData()"
-						style="margin-top: 20px;   margin-left: 40%;">Preview</button>
+						style="margin-top: 20px; margin-left: 40%;">Preview</button>
 
 				</form>
 			</div>

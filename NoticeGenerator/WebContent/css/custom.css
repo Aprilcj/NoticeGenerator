@@ -68,9 +68,11 @@ body {
 	margin-top: 20px;
 }
 
-.option label.radio-line {
-	margin-right: 20%;
+.option label.radio-inline {
 	font-weight: 200;
+	display: block;
+	margin-left: 3%;
+	margin-bottom: 2%;
 }
 
 .option label.checkbox-inline {
