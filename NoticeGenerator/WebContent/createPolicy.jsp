@@ -159,19 +159,19 @@
 								value="credit history" name="personal_information">
 								Credit History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit scores" name="personal_information">
+								value="transaction history" name="personal_information">
 								Transaction History
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="credit scores" name="personal_information">
 								Credit Scores
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit scores" name="personal_information">
+								value="assets" name="personal_information">
 								Assets
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit scores" name="personal_information">
+								value="employment information" name="personal_information">
 								Employment Information
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="credit scores" name="personal_information">
+								value="investment experience" name="personal_information">
 								Investment Experience
 							</label>
 						</div>
@@ -181,26 +181,24 @@
 						<h5>- When will you collect information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="other_information"> Open
+								value="open account" name="other_information"> Open
 								Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="other_information"> Deposit
+								value="deposit money" name="other_information"> Deposit
 								Money
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="other_information"> Pay Bills
+								value="pay bills" name="other_information"> Pay Bills
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="apply_for_loan" name="other_information"> Apply
+								value="apply for loan" name="other_information"> Apply
 								for Loan
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Use Debit or
+								value="use debit or credit card" name="other_information"> Use Debit or
 								Credit Card
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Make Deposits
-							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Withdrawls
+								value="withdrawls from your account" name="other_information"> Withdrawls
 								from your Account
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="use_card" name="other_information"> Seek Advice
+								value="seek advice about investment" name="other_information"> Seek Advice
 								about Investment
 							</label>
 
