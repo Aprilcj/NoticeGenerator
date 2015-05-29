@@ -21,6 +21,13 @@ public class FormData {
 	public List<String> mail_in_option;
 	public String duration;
 	public String joint_option;
+	public String address;
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	public String getInstitute() {
 		return institute;
 	}

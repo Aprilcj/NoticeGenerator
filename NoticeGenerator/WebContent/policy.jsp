@@ -399,6 +399,48 @@
 					</tbody>
 				</table>
 			</div>
+			<%
+					if (formdata.isMail()) {
+			%>
+			<div class="prepend-top-10px" id = "mailform">
+				<table class="margin-0px blueGrayTable" border="0" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th class=" borderBottom-bfbfbf">Mail-in Form</th>
+							<th class="borderLeft-bfbfbf borderBottom-bfbfbf">&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="5"class=" borderBottom-bfbfbf">
+							<input type="checkbox" >Apply my choices only to me<br></td>
+							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Mark any/all you want to limit:<br>					
+									<input type="checkbox" > Do not share information about my creditworthiness your affiliates for their everyday business purposees.<br>
+									<input type="checkbox" > Do not allow your affiliates to use my personal information to market to me.<br>
+									<input type="checkbox" > Do not share my personal information with nonaffiliates to market their products and services to me.<br>
+							</td>
+						</tr>
+						<tr>
+							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Name :
+							</td>
+						</tr>
+						<tr>
+							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Address:
+							</td>
+						</tr>
+						<tr>
+							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">City, State, Zip:
+							</td>
+						</tr>
+						<tr>
+							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Account # :
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<strong>Mail To: ${formdata.getAddress()}</strong>
+			</div>
+			<%} %>
 		</div>
 		<input type="hidden" id="toshow" value="${formJson}" />
 		<button type="button" class="btn btn-info" onclick="download()"
