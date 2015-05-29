@@ -112,41 +112,41 @@
 								everyday business purposes</strong>&mdash; such as to process your
 							transactions, maintain your account(s), respond to court orders
 							and legal investigations, or report to credit bureaus</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question4}</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question5}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getEverydaybusiness()}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_everydaybusiness()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								marketing purposes</strong> &mdash; to offer our products and services to
 							you</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question6}</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question7}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getMarketing()}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_marketing()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For joint
 								marketing with other financial companies</strong></td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question8}</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question9}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getJoint_marketing()}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_joint_marketing()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								affiliates' everyday business purposes</strong> &mdash; information about
 							your transactions and experiences</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question10}</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question11}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_transactions()}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_transactions()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>For our
 								affiliates' everyday business purposes</strong> &mdash; information about
 							your creditworthiness</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question12}</td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.question13}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_creditworthiness()}</td>
+						<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_creditworthiness()}</td>
 					</tr>
 					<tr>
 						<td class=""><strong>For nonaffiliates to market to
 								you</strong></td>
-						<td class="borderLeft-bfbfbf">${formdata.question16}<sup class="font-14px">*</sup></td>
-						<td class="borderLeft-bfbfbf">${formdata.question17}</td>
+						<td class="borderLeft-bfbfbf">${formdata.getNonaffiliates_to_market()}<sup class="font-14px">*</sup></td>
+						<td class="borderLeft-bfbfbf">${formdata.getLimit_nonaffiliates_to_market()}</td>
 					</tr>
 				</tbody>
 			</table>
