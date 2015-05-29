@@ -94,6 +94,10 @@ $(function() {
 
 function checkNumber() {
 	var phone = $('#phone').val();
+	if (phone == "") {
+		return true;
+	}
+	
 	var intReg = /^\d+$/;
 	if (!intReg.test(phone)) {
 		console.log("Please enter a valid Number.");
@@ -106,6 +110,9 @@ function checkNumber() {
 
 function checkWebsite() {
 	var str = $('#website').val();
+	if (str == "") {
+		return true;
+	}
 	var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
 	'((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
 	'((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
@@ -120,7 +127,7 @@ function checkWebsite() {
 	}
 }
 
-function check_what() {
+function checkWhat() {
 	var count = 0;
 	$('#what_to_collect input[type=checkbox]').each(function(index) {
 		if (this.checked) {
@@ -136,7 +143,7 @@ function check_what() {
 	}
 }
 
-function check_when() {
+function checkWhen() {
 	var count = 0;
 	$('#when_to_collect input[type=checkbox]').each(function(index) {
 		if (this.checked) {
@@ -154,19 +161,79 @@ function check_when() {
 
 function missingFieldCheck() {
 	var msg = "";
-	$('.question input[type=text]').each(function(index) {
-		if(this.value == "") {
-			msg += $(this).parent().prev().text().replace("?", "") + " part is missing \n";
+	$('.question input[type=text]').each(
+			function(index) {
+				if (this.value == "") {
+					msg += $(this).parent().prev().text().replace("?", "")
+							+ " part is missing.\n";
+				}
+
+			});
+
+	var count = 0;
+	$('#what_to_collect input').each(function(index) {
+		if (this.checked) {
+			count++;
 		}
-		
 	});
-	
-	$('.question ')
-	
+	if (count == 0) {
+		msg += "- What kind of customer's personal information you want to collect part is missing.\n";
+	}
+
+	var count = 0;
+	$('#where_to_collect input').each(function(index) {
+		if (this.checked) {
+			count++;
+		}
+	});
+	if (count == 0) {
+		msg += "- When will you collect information part is missing.\n";
+	}
+
+	var count = 0;
+	$('#when_to_collect input').each(function(index) {
+		if (this.checked) {
+			count++;
+		}
+	});
+	if (count == 0) {
+		msg += "- Where will you collect informaton from part is missing.\n";
+	}
+
+	var count = 0;
+	$('#what_purpose input').each(function(index) {
+		if (this.checked) {
+			count++;
+		}
+	});
+	if (count == 0) {
+		msg += "- What purpose do you share information part is missing.\n";
+	}
+
 	console.log(msg);
+	return msg;
 }
 
 function getFormData() {
+
+	var warning = "";
+	// first check all the fields
+	if (!checkNumber) {
+		warning += "Number format is not correct";
+	}
+	if (!checkWebsite) {
+		warning += "Website format is not correct";
+	}
+	
+	warning += missingFieldCheck();
+	$('#warning_msg').text(warning);
+	
+	if (warning != "") {
+		return;
+	}
+	
+	
+
 	var formData = new Object();
 
 	var form = document.forms["info"];
