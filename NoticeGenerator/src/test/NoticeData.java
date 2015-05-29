@@ -18,8 +18,17 @@ public class NoticeData {
 	public List<String> where_to_collect;
 	public List<String> mail_in_option;
 	public String duration;
+	public String address;
+	public String getAddress() {
+		return address;
+	}
+
 	public boolean isLimit = true;
+	public boolean isMail = true;
 	
+	public boolean isMail() {
+		return isMail;
+	}
 	public boolean isLimit() {
 		return isLimit;
 	}
@@ -146,8 +155,12 @@ public class NoticeData {
 		this.other_information = formdata.other_information;
 		this.where_to_collect = formdata.where_to_collect;
 		this.mail_in_option = formdata.mail_in_option;
+		this.address = formdata.address;
 		if(formdata.getWhat_purpose_limit_sharing() == null || formdata.getWhat_purpose_limit_sharing().size() == 0){
 			this.isLimit = false;
+		}
+		if(!formdata.getMail_in_option().contains("Mail-in")){
+			this.isMail = false;
 		}
 		if(formdata.what_purpose_sharing.contains("everyday_business")){
 			this.everydaybusiness = "Yes";
