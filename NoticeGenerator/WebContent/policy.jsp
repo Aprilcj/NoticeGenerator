@@ -42,7 +42,8 @@
 		</div>
 	</nav>
 
-	<div class="container" id = "todownload">
+	<div class="container" >
+	  <div id = "todownload">
 		<div class="prepend-top-10px">
 			<table border="0" cellspacing="0" cellpadding="0"
 				class="blueGrayTable margin-0px clear">
@@ -453,6 +454,7 @@
 				</tbody>
 			</table>
 			
+		</div>
 		</div>
 		<input type = "hidden" id="toshow" value="${formJson}"/>
      	 	<button type="button" class="btn btn-info" onclick="download()"

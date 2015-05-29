@@ -282,7 +282,7 @@ function getFormData() {
 }
 
 function download() {
-	var file = document.getElementById("notice").innerHTML;
+	var file = document.getElementById("todownload").innerHTML;
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "download.do");
