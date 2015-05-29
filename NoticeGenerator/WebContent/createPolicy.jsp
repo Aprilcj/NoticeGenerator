@@ -28,11 +28,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#about">How to</a></li>
-					<li class="active"><a href="createPolicy.html">Create
-							Private Policy</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li class="active"><a href="createPolicy.jsp">Create Private Policy</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
