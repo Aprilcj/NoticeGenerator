@@ -154,27 +154,27 @@
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_marketing()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For joint
-									marketing with other financial companies</strong></td>
+							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#joint"> joint
+									marketing </a> with other financial companies</strong></td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getJoint_marketing()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_joint_marketing()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For our
-									affiliates' everyday business purposes</strong> &mdash; information
+							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#affilia">our
+									affiliates'</a> everyday business purposes</strong> &mdash; information
 								about your transactions and experiences</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_transactions()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_transactions()}</td>
 						</tr>
 						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For our
-									affiliates' everyday business purposes</strong> &mdash; information
+							<td class=" borderBottom-bfbfbf"><strong>For <a herf="#affilia">our
+									affiliates'</a> everyday business purposes</strong> &mdash; information
 								about your creditworthiness</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getAffiliates_creditworthiness()}</td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">${formdata.getLimit_affiliates_creditworthiness()}</td>
 						</tr>
 						<tr>
-							<td class=""><strong>For nonaffiliates to market to
+							<td class=""><strong>For <a herf="#nonaffilia">nonaffiliates </a> to market to
 									you</strong></td>
 							<td class="borderLeft-bfbfbf">${formdata.getNonaffiliates_to_market()}<sup
 								class="font-14px">*</sup></td>
@@ -349,8 +349,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>Affiliates</strong></td>
+						<tr > 
+							<td class=" borderBottom-bfbfbf"><strong><a id = "affilia">Affiliates</a></strong></td> 
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Companies
 								related by common ownership or control. They can be financial
 								and nonfinancial companies.
@@ -360,8 +360,8 @@
 								</ul>
 							</td>
 						</tr>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>Nonaffiliates</strong></td>
+						<tr >
+							<td class=" borderBottom-bfbfbf"><strong><a id = "nonaffilia">Nonaffiliates</a></strong></td>
 							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Companies
 								not related by common ownership or control. They can be
 								financial and nonfinancial companies.
@@ -370,8 +370,8 @@
 								</ul>
 							</td>
 						</tr>
-						<tr>
-							<td class=""><strong>Joint marketing</strong></td>
+						<tr >
+							<td class=""><strong><a id = "joint">Joint marketing</a></strong></td>
 							<td class="borderLeft-bfbfbf">A formal agreement between
 								nonaffiliated financial companies that together market financial
 								products or services to you.
