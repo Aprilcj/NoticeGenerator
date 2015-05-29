@@ -164,8 +164,8 @@ function missingFieldCheck() {
 	$('.question input[type=text]').each(
 			function(index) {
 				if (this.value == "") {
-					msg += $(this).parent().prev().text().replace("?", "")
-							+ " part is missing.\n";
+					msg += "<h5>" + $(this).parent().prev().text().replace("?", "")
+							+ " part is missing.</h5> <br/>";
 				}
 
 			});
@@ -177,7 +177,7 @@ function missingFieldCheck() {
 		}
 	});
 	if (count == 0) {
-		msg += "- What kind of customer's personal information you want to collect part is missing.\n";
+		msg += "<h5>- What kind of customer's personal information you want to collect part is missing.</h5><br/>";
 	}
 
 	var count = 0;
@@ -187,7 +187,7 @@ function missingFieldCheck() {
 		}
 	});
 	if (count == 0) {
-		msg += "- When will you collect information part is missing.\n";
+		msg += "<h5>- When will you collect information part is missing.</h5><br/>";
 	}
 
 	var count = 0;
@@ -197,7 +197,7 @@ function missingFieldCheck() {
 		}
 	});
 	if (count == 0) {
-		msg += "- Where will you collect informaton from part is missing.\n";
+		msg += "<h5>- Where will you collect informaton from part is missing.</h5><br/>";
 	}
 
 	var count = 0;
@@ -207,7 +207,7 @@ function missingFieldCheck() {
 		}
 	});
 	if (count == 0) {
-		msg += "- What purpose do you share information part is missing.\n";
+		msg += "<h5>- What purpose do you share information part is missing.</h5><br/>";
 	}
 
 	console.log(msg);
@@ -218,15 +218,23 @@ function getFormData() {
 
 	var warning = "";
 	// first check all the fields
-	if (!checkNumber) {
-		warning += "Number format is not correct";
+	if (!checkNumber()) {
+		warning += "<h5>- Number format is not correct<h5><br/>";
 	}
-	if (!checkWebsite) {
-		warning += "Website format is not correct";
+	if (!checkWebsite()) {
+		warning += "<h5>- Website format is not correct<h5><br/>";
+	}
+	
+	if (!checkWhat()) {
+		warning += "<h5>- What kind of customer's personal information you want to collect part should at least select five options<h5><br/>";
+	}
+	
+	if (!checkWhen()) {
+		warning += "<h5>- When will you collect information part should at least select five options<h5><br/>";
 	}
 	
 	warning += missingFieldCheck();
-	$('#warning_msg').text(warning);
+	$('.warning_msg').html(warning);
 	
 	if (warning != "") {
 		return;

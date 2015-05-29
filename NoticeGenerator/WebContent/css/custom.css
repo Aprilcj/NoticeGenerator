@@ -95,3 +95,8 @@ h5+span {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
+.warning_msg {
+	color: red;
+	border-top: 1px solid grey;
+	
+}
