@@ -21,6 +21,32 @@ $(function() {
 												$(
 														'#what_purpose_limit_div input[type=checkbox]')
 														.get(index).disabled = true;
+												$(
+														'#what_purpose_limit_div input[type=checkbox]')
+														.get(index).checked = false;
+												var empty = true;
+												$(
+														'#what_purpose_limit_div input[type=checkbox]')
+														.each(
+																function(index) {
+																	if ($(
+																			'#what_purpose_limit_div input[type=checkbox]')
+																			.get(
+																					index).checked) {
+																		empty = false;
+																	}
+																});
+
+												if (!empty) {
+													$('#opt_out_option').show(
+															'fast');
+													$('#duration').show('fast');
+												} else {
+													$('#opt_out_option').hide(
+															'fast');
+													$('#duration').hide('fast');
+												}
+
 											}
 
 										});
@@ -97,8 +123,8 @@ function checkNumber() {
 	if (phone == "") {
 		return true;
 	}
-	
-	var intReg = /^\d+$/;
+
+	var intReg = /^\d{10}$/;
 	if (!intReg.test(phone)) {
 		console.log("Please enter a valid Number.");
 		return false;
@@ -164,7 +190,8 @@ function missingFieldCheck() {
 	$('.question input[type=text]').each(
 			function(index) {
 				if (this.value == "") {
-					msg += "<h5>" + $(this).parent().prev().text().replace("?", "")
+					msg += "<h5>"
+							+ $(this).parent().prev().text().replace("?", "")
 							+ " part is missing.</h5> <br/>";
 				}
 
@@ -224,23 +251,21 @@ function getFormData() {
 	if (!checkWebsite()) {
 		warning += "<h5>- Website format is not correct<h5><br/>";
 	}
-	
+
 	if (!checkWhat()) {
 		warning += "<h5>- What kind of customer's personal information you want to collect part should at least select five options<h5><br/>";
 	}
-	
+
 	if (!checkWhen()) {
 		warning += "<h5>- When will you collect information part should at least select five options<h5><br/>";
 	}
-	
+
 	warning += missingFieldCheck();
 	$('.warning_msg').html(warning);
-	
+
 	if (warning != "") {
 		return;
 	}
-	
-	
 
 	var formData = new Object();
 
