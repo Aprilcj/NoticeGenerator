@@ -233,30 +233,30 @@
 						<h5>- What purpose do you share information?</h5>
 						<div class="option" id="what_purpose_div">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="what_purpose_sharing"
+								value="everyday_business" name="what_purpose_sharing"
 								id="purpose_option_1"> Everyday Business
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="what_purpose_sharing"
+								value="marketing" name="what_purpose_sharing"
 								id="purpose_option_2"> Marketing
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"
+								value="joint_marketing" name="what_purpose_sharing"
 								id="purpose_option_3"> Joint Marketing with Other
 								Financial Companies
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"
+								value="affiliates_transactions" name="what_purpose_sharing"
 								id="purpose_option_4"> Affiliates Everyday Business
 								Purposes (Information about customers' transactions and
 								experiences)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"
+								value="affiliates_creditworthiness" name="what_purpose_sharing"
 								id="purpose_option_5"> Affiliates Everyday Business
 								Purposes (Information about customers' creditworthiness)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"
+								value="nonaffiliates_to_market" name="what_purpose_sharing"
 								id="purpose_option_6"> Nonaffiliates to Market to
 								Customers
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_sharing"
+								value="affiliates_to_market" name="what_purpose_sharing"
 								id="purpose_option_7"> Affiliates to Market to Customers
 							</label>
 						</div>
@@ -268,31 +268,31 @@
 							(based on the last question)</h5>
 						<div class="option" id="what_purpose_limit_div">
 							<label class="checkbox-inline"> <input type="checkbox"
-								value="open_account" name="what_purpose_limit_sharing"
+								value="limit_everyday_business" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_1"> Everyday Business
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="deposit_money" name="what_purpose_limit_sharing"
+								value="limit_marketing" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_2"> Marketing
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing"
+								value="limit_joint_marketing" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_3"> Joint Marketing with Other
 								Financial Companies
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing"
+								value="limit_affiliates_transactions" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_4"> Affiliates Everyday
 								Business Purposes (Information about customers' transactions and
 								experiences)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing"
+								value="limit_affiliates_creditworthiness" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_5"> Affiliates Everyday
 								Business Purposes (Information about customers'
 								creditworthiness)
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing"
+								value="limit_nonaffiliates_to_market" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_6"> Nonaffiliates to Market to
 								Customers
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="pay_bills" name="what_purpose_limit_sharing"
+								value="limit_affiliates_to_market" name="what_purpose_limit_sharing"
 								id="purpose_limit_option_7"> Affiliates to Market to
 								Customers
 							</label>
@@ -329,7 +329,7 @@
 					</c:if>
 
 					<button type="button" class="btn btn-info" onclick="getFormData()"
-						style="margin-top: 20px;">Generate Policy</button>
+						style="margin-top: 20px;">Preview</button>
 
 				</form>
 			</div>

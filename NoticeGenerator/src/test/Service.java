@@ -27,8 +27,9 @@ public class Service extends HttpServlet {
 		System.out.println(formData.institute);
 		System.out.println(formData.personal_information.get(0));
 		
-		request.setAttribute("formdata", formData);
-		request.setAttribute("test", formData.personal_information.get(0));
+		NoticeData noticedata = new NoticeData();
+		noticedata.SetData(formData);
+		request.setAttribute("formdata", noticedata);
 		RequestDispatcher d = request.getRequestDispatcher("policy.jsp");
 		d.forward(request, response);
 	}
