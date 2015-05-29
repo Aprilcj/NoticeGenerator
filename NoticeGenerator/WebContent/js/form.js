@@ -8,11 +8,9 @@ $(function() {
 		} else {
 			display = false;
 			$('.hidden_option').hide('fast');
-		}
-		
-		
-		
+		}	
 	});
+	
 
 	var opt_out_option;
 
@@ -82,16 +80,43 @@ $(function() {
 										});
 
 						if (!empty) {
-							$('.question_optional').show('fast');
+							$('#joint_account').show('fast');
+							$('#duration').show('fast');
+							$('#address').show('fast');
+							$('#opt_out_option').show('fast');
 						} else {
-							$('.question_optional').hide('fast');
+							$('#joint_account').hide('fast');
+							$('#duration').hide('fast');
+							$('#address').hide('fast');
+							$('#opt_out_option').hide('fast');
 						}
 					});
+	
+	$('#opt_out_option input').change(function () {
+		if ($('#mail_in_check_option').prop('checked')) {
+			$('#address').show('fast');
+		} else {
+			$('#address').hide('fast');
+		}
+			
+	}); 
 
 	$('h5').hover(function() {
 		var offset = $(this).offset();
 		// var length = $(this).width() + offset.left;
-		$(this).append('<span id="tips">haha</span>');
+		if ($(this).attr('id') == 'what_des' || $(this).attr('id') == 'when_des') {
+			$(this).append('<span id="tips">At least select five options</span>');
+		} else if ($(this).attr('id') == 'what_purpose_des') {
+			$(this).append('<span id="tips">this option will limit the next option. If not one is selected, the next option is not optional</span>');
+		} else if ($(this).attr('id') == 'what_purpose_limit_des') {
+			$(this).append('<span id="tips">Select one of the following option means you will provide the opt-out option</span>');
+		} else if ($(this).attr('id') == 'duration_des') {
+			$(this).append('<span id="tips">Insert a number that is 30 or greater in the space marked [30].</span>');
+		} else {
+			return;
+		}
+
+
 		$('#tips').fadeIn(200).addClass('showTooltip');
 		$('#tips').css('left', offset.left + 'px');
 	}, function() {

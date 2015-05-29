@@ -77,7 +77,7 @@
 						<h5>- Phone number of financial institute</h5>
 						<div class="option">
 							<input type="text" class="form-control" id="phone"
-								placeholder="Phone Number">
+								placeholder="Example: 4123267535">
 						</div>
 					</div>
 
@@ -85,7 +85,7 @@
 						<h5>- Website of financial institute</h5>
 						<div class="option">
 							<input type="text" class="form-control" id="website"
-								placeholder="Website">
+								placeholder="Example: http://domainname.suffix">
 						</div>
 					</div>
 
@@ -144,7 +144,7 @@
 					</ol>
 
 					<div class="question_check" id="what_to_collect">
-						<h5>- What kind of customer's personal information you want
+						<h5 id='what_des'>- What kind of customer's personal information you want
 							to collect?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -177,7 +177,7 @@
 					</div>
 
 					<div class="question" id="when_to_collect">
-						<h5>- When will you collect information?</h5>
+						<h5 id='when_des'>- When will you collect information?</h5>
 						<div class="option">
 							<label class="checkbox-inline"> <input type="checkbox"
 								value="open account" name="other_information"> Open
@@ -208,7 +208,7 @@
 					<div class="question" id="where_to_collect">
 						<h5>- Where will you collect informaton from?</h5>
 						<div class="option">
-                            <label class="checkbox-inline"> <input type="checkbox"
+							<label class="checkbox-inline"> <input type="checkbox"
 								value="credit bureaus" name="where_to_collect"> Credit
 								Bureaus
 							</label> <label class="checkbox-inline"> <input type="checkbox"
@@ -216,7 +216,7 @@
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="other companies" name="where_to_collect"> Other
 								Companies
-							</label> 
+							</label>
 						</div>
 					</div>
 
@@ -227,7 +227,7 @@
 
 
 					<div class="question" id="what_purpose">
-						<h5>- What purpose do you share information?</h5>
+						<h5 id='what_purpose_des'>- What purpose do you share information?</h5>
 						<div class="option" id="what_purpose_div">
 							<label class="checkbox-inline"> <input type="checkbox"
 								value="everyday_business" name="what_purpose_sharing"
@@ -261,7 +261,7 @@
 
 
 					<div class="question_optional" id="what_purpose_limit_sharing">
-						<h5>- Do you limit your sharing on the following purpose?
+						<h5 id='what_purpose_limit_des'>- Do you limit your sharing on the following purpose?
 							(based on the last question)</h5>
 						<div class="option" id="what_purpose_limit_div">
 							<label class="checkbox-inline"> <input type="checkbox"
@@ -306,14 +306,21 @@
 							</label> <label class="checkbox-inline"> <input type="checkbox"
 								value="Website" name="mail_in_option"> Website
 							</label> <label class="checkbox-inline"> <input type="checkbox"
-								value="Mail-in" name="mail_in_option"> Mail-in
+								value="Mail-in" id="mail_in_check_option" name="mail_in_option"> Mail-in
 							</label>
 						</div>
 					</div>
 
-
+					<div class="question" id="address" style="display: none">
+						<h5>- Company Address to mail</h5>
+						<div class="option">
+							<input type="text" class="form-control" id="institute"
+								placeholder="Address">
+						</div>
+					</div>
+					
 					<div class="question_optional" id="duration" style="display: none">
-						<h5>- How long do share the information starting from you
+						<h5 id='duration_des'>- How long do share the information starting from you
 							sent the notice?</h5>
 						<div class="option">
 							<input type="text" class="form-control"
@@ -327,11 +334,11 @@
 						<h5>- What happens when the customer has a joint account?</h5>
 						<div class="option">
 							<label class="radio-inline"> <input type="radio"
-								name="joint_option" value="Yes"> Your choices will
-								apply to everyone on your account
+								name="joint_option" value="Yes"> Your choices will apply
+								to everyone on your account
 							</label> <label class="radio-inline"> <input type="radio"
-								name="joint_option" value="No"> Your choices will
-								apply to everyone on your account - unless told otherwise
+								name="joint_option" value="No"> Your choices will apply
+								to everyone on your account - unless told otherwise
 							</label>
 						</div>
 					</div>
