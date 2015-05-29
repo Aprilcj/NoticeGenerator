@@ -172,7 +172,7 @@
 						</ul>
 						<p class="prepend-top-10px">
 							<strong>Please note:</strong> If you are a <em>new customer</em>,
-							we can begin sharing your information 30 days from the date we
+							we can begin sharing your information ${formdata.getDuration()} days from the date we
 							sent this notice. When you are <em>no longer</em> our customer,
 							we continue to share your information as described in this
 							notice. However, you can contact us at any time to limit our
@@ -196,7 +196,7 @@
 									telephone, please call ${formdata.getPhone()}--our menu will prompt you
 									through your choices, or visit us online: <a
 									title="http://www.usbank.com/privacy"
-									href="/privacy/index.html">http://www.usbank.com/privacy</a>
+									href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
 									and tell us your preference on the "Exercise Your Privacy
 									Choice" page.
 								</li>
@@ -233,7 +233,7 @@
 								<strong>Who is providing this notice?</strong>
 							</p></td>
 						<td class="borderLeft-bfbfbf"><p>Companies with ${formdata.getInstitute()} and other affiliates. Please see
-								below for a list of other affiliates that do not have a getInstitute() name.</p>
+								below for a list of other affiliates that do not have a ${formdata.getInstitute()} name.</p>
 							<p>
 								${formdata.getWho()}
 							</p></td>
@@ -259,7 +259,7 @@
 							your personal information from unauthorized access and use, we
 							use security measures that comply with federal law. These
 							measures include computer safeguards and secured files and
-							buildings. ${formdata.getHow()}</td>
+							buildings. In addtion, ${formdata.getHow()}</td>
 					</tr>
 					<tr>
 						<td class=" borderBottom-bfbfbf"><strong>How does
@@ -272,8 +272,9 @@
                                      <li>${item}</li>
                                    </c:forEach>
 								<li>tell us about your investment or retirement portfolio</li>
-							</ul> We also collect your personal information from others, such as
-							credit bureaus, affiliates, or other companies.
+							</ul> We also collect your personal information from <c:forEach var="item" items="${formdata.getOther_information()}">
+                                     <li>${item}</li>
+                                   </c:forEach>
 						</td>
 					</tr>
 					<tr>
