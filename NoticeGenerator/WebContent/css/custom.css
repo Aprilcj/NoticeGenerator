@@ -92,10 +92,11 @@ h5+span {
 	padding: 5px;
 	margin-top: 1.3em;
 	position: absolute;
-	max-width: 200px;
+	max-width: 500px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	z-index: 999;
 }
 .warning_msg {
 	color: red;
