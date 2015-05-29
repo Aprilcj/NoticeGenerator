@@ -184,14 +184,13 @@
 				</table>
 			</div>
 
-<<<<<<< HEAD
-			<div class="prepend-top-10px">
-				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
-					cellspacing="0">
-=======
 		<div class="prepend-top-10px">
 			<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
 				cellspacing="0">
+				<tbody>
+				<%
+					if (formdata.isLimit()) {
+				%>
 				<tr>
 					<td class=" borderBottom-bfbfbf"><p>
 							<strong>To limit our sharing</strong>
@@ -215,33 +214,7 @@
 							sharing.
 						</p></td>
 				</tr>
-				<tbody>
->>>>>>> origin/master
-					<tr>
-						<td class=" borderBottom-bfbfbf"><p>
-								<strong>To limit our sharing</strong>
-							</p></td>
-						<td class="borderLeft-bfbfbf borderBottom-bfbfbf"><ul
-								class="generalList prepend-top-5px margin-0px">
-								<li>Call ${formdata.getPhone()}&mdash; our menu will prompt
-									you through your choice or</li>
-								<li>Visit us online: <a
-									title="http://www.usbank.com/privacy"
-									href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
-									and tell us your preference on the "Exercise Your Privacy
-									Choice" page.
-								</li>
-							</ul>
-							<p class="prepend-top-10px">
-								<strong>Please note:</strong> If you are a <em>new customer</em>,
-								we can begin sharing your information 30 days from the date we
-								sent this notice. When you are <em>no longer</em> our customer,
-								we continue to share your information as described in this
-								notice. However, you can contact us at any time to limit our
-								sharing.
-							</p></td>
-					</tr>
-					<tbody>
+				
 						<tr>
 							<td class=" borderBottom-bfbfbf"><p>
 									<strong>To limit our direct marketing</strong>
@@ -258,17 +231,13 @@
 										telephone, please call ${formdata.getPhone()}--our menu will
 										prompt you through your choices, or visit us online: <a
 										title="http://www.usbank.com/privacy"
-										href="/privacy/index.html">http://www.usbank.com/privacy</a>
+										href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
 										and tell us your preference on the "Exercise Your Privacy
 										Choice" page.
 									</li>
-									<li>To limit our direct marketing to you by e-mail, visit
-										us online: <a title="http://www.usbank.com/privacy"
-										href="${formdata.getWebsite()}">${formdata.getWebsite()}</a>
-										and tell us your preference on the "Email Preferences" page.
-									</li>
 								</ul></td>
 						</tr>
+						<%} %>
 						<tr>
 							<td class=""><p>
 									<strong>Questions?</strong>
@@ -280,92 +249,7 @@
 				</table>
 			</div>
 
-<<<<<<< HEAD
-			<div class="prepend-top-10px">
-				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
-					cellspacing="0">
-					<thead>
-						<tr>
-							<th class=" borderBottom-bfbfbf"><p>Who we are</p></th>
-							<th class="borderLeft-bfbfbf borderBottom-bfbfbf"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class=""><p>
-									<strong>Who is providing this notice?</strong>
-								</p></td>
-							<td class="borderLeft-bfbfbf"><p>Companies with
-									${formdata.getInstitute()} and other affiliates. Please see
-									below for a list of other affiliates that do not have a
-									getInstitute() name.</p>
-								<p>${formdata.getWho()}</p></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
 
-			<div class="prepend-top-10px">
-				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
-					cellspacing="0">
-					<thead>
-						<tr>
-							<th class=" borderBottom-bfbfbf"><strong>What we do</strong></th>
-							<th class="borderLeft-bfbfbf borderBottom-bfbfbf">&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>How does
-									${formdata.getInstitute()} protect my personal information?</strong></td>
-							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">To protect
-								your personal information from unauthorized access and use, we
-								use security measures that comply with federal law. These
-								measures include computer safeguards and secured files and
-								buildings. ${formdata.getHow()}</td>
-						</tr>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>How does
-									${formdata.getInstitute()} collect my personal information?</strong></td>
-							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">We collect
-								your personal information, for example, when you
-								<ul class="mortgageList prepend-top-5px margin-0px">
-									<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-									<c:forEach var="item"
-										items="${formdata.getOther_information()}">
-										<li>${item}</li>
-									</c:forEach>
-									<li>tell us about your investment or retirement portfolio</li>
-								</ul> We also collect your personal information from others, such as
-								credit bureaus, affiliates, or other companies.
-							</td>
-						</tr>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>Why can't
-									I limit all sharing?</strong></td>
-							<td class="borderLeft-bfbfbf borderBottom-bfbfbf">Federal
-								law gives you the right to limit only
-								<ul class="mortgageList prepend-top-5px margin-0px">
-									<li>sharing for affiliates' everyday business
-										purposes&mdash;information about your creditworthiness</li>
-									<li>affiliates from using your information to market to
-										you</li>
-									<li>sharing for nonaffiliates to market to you</li>
-								</ul> State laws and individual companies may give you additional
-								rights to limit sharing. See below for more on your rights under
-								state law.
-							</td>
-						</tr>
-						<tr>
-							<td class=""><strong>What happens when I limit
-									sharing for an account I hold jointly with someone else?</strong></td>
-							<td class="borderLeft-bfbfbf">Your choices will apply
-								individually&mdash;unless you tell us otherwise.</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-=======
 		<div class="prepend-top-10px">
 			<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
 				cellspacing="0">
@@ -420,9 +304,14 @@
                                      <li>${item}</li>
                                    </c:forEach>
 								<li>tell us about your investment or retirement portfolio</li>
-							</ul> We also collect your personal information from <c:forEach var="item" items="${formdata.getOther_information()}">
-                                     <li>${item}</li>
-                                   </c:forEach>
+							</ul> We also collect your personal information from 
+								   <%
+									   for (int i = 0; i < formdata.getWhere_to_collect().size() - 1; i++) {
+									%>
+												<%=formdata.getWhere_to_collect().get(i)%> or
+									<% } %>
+									<%=formdata.getWhere_to_collect().get(formdata.getWhere_to_collect().size() - 1)%>.
+									
 						</td>
 					</tr>
 					<tr>
@@ -449,7 +338,6 @@
 				</tbody>
 			</table>
 		</div>
->>>>>>> origin/master
 
 			<div class="prepend-top-10px">
 				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
@@ -467,9 +355,7 @@
 								related by common ownership or control. They can be financial
 								and nonfinancial companies.
 								<ul class="mortgageList prepend-top-5px margin-0px">
-									<li><em>Our affiliates include companies with a U.S.
-											Bank and U.S. Bancorp name; financial companies such as <br />U.S.
-											Bank National Association and U.S. Bancorp Investments, Inc.
+									<li><em>${formdata.getAffliates_definition()}
 									</em></li>
 								</ul>
 							</td>
@@ -480,8 +366,7 @@
 								not related by common ownership or control. They can be
 								financial and nonfinancial companies.
 								<ul class="mortgageList prepend-top-5px margin-0px">
-									<li><em>${formdata.getInstitute()} does not share
-											with nonaffiliates so they can market to you</em></li>
+									<li><em>${formdata.getNonaffliates_definition()}</em></li>
 								</ul>
 							</td>
 						</tr>
@@ -491,8 +376,7 @@
 								nonaffiliated financial companies that together market financial
 								products or services to you.
 								<ul class="mortgageList prepend-top-5px margin-0px">
-									<li><em>${formdata.getInstitute()} doesn't jointly
-											market</em></li>
+									<li><em>${formdata.getJoint_marketing_definition()}</em></li>
 								</ul>
 							</td>
 						</tr>
@@ -510,100 +394,10 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class=" borderBottom-bfbfbf">You may have other privacy
-								protections under applicable state laws. To the extent these
-								state laws apply, we will comply with them when we share
-								information about you.</td>
-						</tr>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For
-									California residents:</strong> In accordance with California law, we
-								will not share information we collect about you with companies
-								outside of our corporate family, except as permitted by law,
-								including, for example, with your consent or to service your
-								account. We will limit sharing among our companies to the extent
-								required by California law.</td>
-						</tr>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><strong>For
-									Vermont residents:</strong> In accordance with Vermont law, we will not
-								share information we collect about you with companies outside of
-								our corporate family, except as permitted by law, including, for
-								example with your consent or to service your account. We will
-								not share information about your creditworthiness within our
-								corporate family except with your authorization or consent, but
-								we may share information about our transactions or experiences
-								with you within our corporate family without your consent.</td>
-						</tr>
-						<tr>
-							<td class=""><strong>For Nevada residents:</strong> We may
-								contact our existing customers by telephone to offer additional
-								financial products that we believe may be of interest to you.
-								You have the right to opt out of these calls by adding your name
-								to our internal do-not-call list. To opt out of these calls, or
-								for more information about your opt out rights, please contact
-								our customer service department. You can reach us by calling
-								800-USBANKS (800-872-2657), clicking the &ldquo;Email Us&rdquo;
-								link at usbank.com/privacy, or writing to P.O. Box 64490, St.
-								Paul, MN 55164. You are being provided this notice under Nevada
-								state law. In addition to contacting ${formdata.getInstitute()},
-								Nevada residents can contact the Nevada Attorney General for
-								more information about your opt out rights by calling
-								702-486-3132, emailing aginfo@ag.nv.gov, or by writing to: <br />Office
-								of the Attorney General, Nevada Department of Justice, Bureau of
-								Consumer Protection 100 North Carson Street, Carson City, NV
-								89701-4717</td>
+							<td class=" borderBottom-bfbfbf">${formdata.getAdditional_note()}</td>
 						</tr>
 					</tbody>
 				</table>
-			</div>
-
-
-			<div class="prepend-top-10px">
-				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
-					cellspacing="0">
-					<thead>
-						<tr>
-							<th class=" borderBottom-bfbfbf"><p>
-									<a name="affiliates"></a>Additional U.S. Bancorp affiliates
-								</p></th>
-							<th class="borderLeft-bfbfbf borderBottom-bfbfbf"></th>
-							<th class="borderLeft-bfbfbf borderBottom-bfbfbf"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class=" borderBottom-bfbfbf"><p>The Miami Valley
-									Insurance Company</p></td>
-							<td class="borderLeft-bfbfbf borderBottom-bfbfbf"><p>Mississippi
-									Valley Company</p></td>
-							<td class="borderLeft-bfbfbf borderBottom-bfbfbf"><p>Elan
-									Life Insurance Company</p></td>
-						</tr>
-						<tr>
-							<td class=""><p>Red Sky Risk Services, LLC</p></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div class="prepend-top-10px">
-				<table class="margin-0px blueGrayTable" border="0" cellpadding="0"
-					cellspacing="0">
-					<tr>
-						<td class=""><p class="prepend-top-0px">
-								<sup class="font-14px">*</sup>Please keep in mind that, as
-								permitted by applicable law, if you have a private label credit
-								card account with us, we share information about you with our
-								financial or retail partners in connection with maintaining and
-								servicing your account, including for that financial or retail
-								partner to market to you. Federal law does not give you the
-								right to limit this sharing.
-							</p></td>
-					</tr>
-					</tbody>
-				</table>
-
 			</div>
 		</div>
 		<input type="hidden" id="toshow" value="${formJson}" />
